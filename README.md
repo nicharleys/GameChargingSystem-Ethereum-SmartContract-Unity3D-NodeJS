@@ -14,7 +14,7 @@
 # I、介紹
 
 <div>
-   <h3 styles={font-weight:bold;}>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp這是一個使用乙太坊的智能合約功能結合Unity3D遊戲來實現的交易系統，串接方式是由NodeJS所寫成Dapp做為資料的傳接過程，並傳送至Photon Cloud伺服器以提供多人參與交易，藉由Unity3D的輸出結果可以決定使用的平台，讓使用者可以在不同的環境下使用智能合約功能，並以高效率的交易速度來達成虛擬貨幣以及合約代幣的交易，本系統以提供串接方式為例。
+   <h3 styles={font-weight:bold;}>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp這是一個使用乙太坊的智能合約功能結合Unity3D遊戲來實現的交易系統，串接方式是由NodeJS所寫成Dapp做為資料的傳接過程，並傳送至Photon Cloud伺服器以提供多人參與交易，藉由Unity3D的輸出結果可以決定使用的平台，讓使用者可以在不同的環境下使用智能合約功能，並以高效率的交易速度來達成虛擬貨幣以及合約代幣的交易，本系統以串接方式為例。
 </<h3> 
 </div> 
 
@@ -26,19 +26,20 @@
         <td>
             <div>
             <h3><b>優點:</b><br></h3>
-            <b>&nbsp; 1.可以自由更換模型 </b><br>
-            <b>&nbsp; 2.可自由更換訓練的目標物 </b><br>
-            <b>&nbsp; 3.節省在手機上運算的負擔 </b><br>
-            <b>&nbsp; 4.辨識能力可以更自由的調整 </b><br>
-            <b>&nbsp; 5.使用電腦中原生的模型 </b>
+            <b>&nbsp; 1.可以自由更換環境 </b><br>
+            <b>&nbsp; 2.不影響交易速度下運行乙太坊 </b><br>
+            <b>&nbsp; 3.保有高度交易安全性 </b><br>
+            <b>&nbsp; 4.共用此系統可共通交易貨幣 </b><br>
+            <b>&nbsp; 5.多人連線可自行選擇交易對象 </b>
            </div>
         </td>
         <td>
             <div>
             <h3><b>缺點:</b><br></h3><br>
             <b>&nbsp; 1.必須要有網路 </b><br>
-            <b>&nbsp; 2.網路速度會影響辨識速度 </b>
-               <br><br><br>
+            <b>&nbsp; 2.必須要有主機作為伺服器 </b><br>
+            <b>&nbsp; 3.交易代幣需要購買或是挖礦獲取 </b>
+            <br><br><br>
            </div>
         </td>
     </tr>
