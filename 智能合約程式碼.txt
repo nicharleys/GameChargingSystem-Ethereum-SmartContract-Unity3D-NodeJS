@@ -1,0 +1,312 @@
+pragma solidity ^0.4.24;
+import "./ERC20_interface.sol";
+contract ERC20_token is ERC20_interface {
+
+    uint256 constant private MAX_UINT256 = 2**256 - 1;
+    mapping (address => uint256) public balances;
+    mapping (address => uint256) public item1;
+    mapping (address => uint256) public item2;
+    
+    mapping (address => mapping (address => uint256)) public allowed;
+    string public name;
+    uint8 public decimals = 18;
+    string public symbol;
+    address public owner; 
+    address public raisesOwner;
+    address[] public players;
+    address[2][] public boxusers;
+    uint256[4][] public boxes;
+    uint256 public buyPrice;
+    uint256 public buyPricei1;
+    uint256 public buyPricei2;
+    uint private weiToEther = 10 ** 18;
+    
+    event Transfer(address indexed _fromAddress, address indexed _toAddress, uint256 indexed _inputValue);
+    event Approval(address indexed _fromAddress, address indexed _toAddress, uint256 indexed _inputValue);
+    event Exchange(address indexed _fromAddress, address indexed _toAddress, uint256 _balancesValue, uint256 _item1Value, uint256 _item2Value, string _status);
+    
+    constructor(
+        uint256 _initialSupply,
+        uint256 _buyPrice,
+        uint256 _buyPricei1,
+        uint256 _buyPricei2,
+        string _tokenName,
+        string _tokenSymbol,
+        address _raisesOwner
+    )public {
+        totalSupply = _initialSupply * 10 ** uint256(decimals);
+        balances[msg.sender] = totalSupply;
+        item1[msg.sender] = totalSupply;
+        item2[msg.sender] = totalSupply;
+        name = _tokenName;
+        symbol = _tokenSymbol;
+        owner = msg.sender;
+        buyPrice = _buyPrice;
+        buyPricei1 = _buyPricei1;
+        buyPricei2 = _buyPricei2;
+        raisesOwner = _raisesOwner;
+    }
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
+    function balanceOf(address _owner) public view returns (uint256 balance) {
+        return balances[_owner];
+    }
+    function item1Of(address _owner) public view returns (uint256 balance) {
+        return item1[_owner];
+    }
+    function item2Of(address _owner) public view returns (uint256 balance) {
+        return item2[_owner];
+    }
+    function transfer(address _to, uint256 _value) public returns (bool success) {
+        require(balances[msg.sender] >= _value);
+        balances[msg.sender] -= _value;
+        balances[_to] += _value;
+        emit Transfer(msg.sender, _to, _value);
+        return true;
+    }
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success){
+        uint256 allowance = allowed[_from][msg.sender];
+        require(balances[_from] >= _value && allowance >= _value);
+        balances[_to] += _value;
+        balances[_from] -= _value;
+        if (allowance < MAX_UINT256){
+            allowed[_from][msg.sender] -= _value;
+        }
+        emit Transfer(_from, _to, _value);
+        return true;
+    }
+    function putExchange(address _to, uint256 _balances, uint256 _item1, uint256 _item2) public returns (bool success){
+        bool formbox = false;
+        for(uint boxnumber = 0;boxnumber < boxusers.length;boxnumber++){
+            if(boxusers[boxnumber][0] == msg.sender && boxusers[boxnumber][1] == _to){
+                formbox = true;
+            }
+        }
+        if(formbox == false && _to != msg.sender){
+            require(balances[msg.sender] >= _balances);
+            require(item1[msg.sender] >= _item1);
+            require(item2[msg.sender] >= _item2);
+            boxusers.push([msg.sender, _to]);
+            boxes.push([_balances, _item1, _item2, 0]);
+            balances[msg.sender] -= _balances;
+            item1[msg.sender] -= _item1;
+	        item2[msg.sender] -= _item2;
+            emit Exchange(msg.sender, _to, _balances, _item1, _item2, "confirming");
+            return true;
+        }
+    }
+    function lookExchange(address _from, address _to) public view returns (uint256 _balances, uint256 _item1, uint256 _item2, uint _status){
+        uint userbox = 0;
+        for(uint boxnumber = 0;boxnumber < boxusers.length;boxnumber++){
+            if(boxusers[boxnumber][0] == _from && boxusers[boxnumber][1] == _to){
+                userbox = boxnumber;
+            }
+        }
+        return (boxes[userbox][0], boxes[userbox][1], boxes[userbox][2], boxes[userbox][3]);
+    }
+    function exchangeStatus(address _to) public returns (bool success){
+        bool formbox = false;
+        uint userbox = 0;
+        for(uint boxnumber = 0;boxnumber < boxusers.length;boxnumber++){
+            if(boxusers[boxnumber][0] == msg.sender && boxusers[boxnumber][1] == _to){
+                userbox = boxnumber;
+                formbox = true;
+            }
+        }
+        if(formbox == true){
+            if(boxes[userbox][3] == 1){
+                boxes[userbox][3] = 0;
+                emit Exchange(_to, msg.sender, boxes[userbox][0], boxes[userbox][1], boxes[userbox][2], "confirming");
+            }
+            else if(boxes[userbox][3] == 0){
+                boxes[userbox][3] = 1;
+                emit Exchange(_to, msg.sender, boxes[userbox][0], boxes[userbox][1], boxes[userbox][2], "confirm");
+            }
+            return true;
+        }
+    }
+    function cancelExchange(address _to) public returns (bool success){
+        bool formbox = false;
+        uint userbox = 0;
+        for(uint boxnumber = 0;boxnumber < boxusers.length;boxnumber++){
+            if(boxusers[boxnumber][0] == msg.sender && boxusers[boxnumber][1] == _to){
+                userbox = boxnumber;
+                formbox = true;
+            }
+        }
+        if(formbox == true && boxes[userbox][3] == 0){
+            balances[msg.sender] += boxes[userbox][0];
+            item1[msg.sender] += boxes[userbox][1];
+	        item2[msg.sender] += boxes[userbox][2]; 
+	        emit Exchange(_to, msg.sender, boxes[userbox][0], boxes[userbox][1], boxes[userbox][2], "Backtrack");
+	        for (uint i = userbox; i < boxusers.length-1; i++) {
+                boxusers[i][0] = boxusers[i+1][0];
+                boxusers[i][1] = boxusers[i+1][1];
+                boxes[i][0] = boxes[i+1][0];
+                boxes[i][1] = boxes[i+1][1];
+                boxes[i][2] = boxes[i+1][2];
+                boxes[i][3] = boxes[i+1][3];
+            }
+            delete boxusers[boxusers.length -1][0];
+            delete boxusers[boxusers.length -1][1];
+            delete boxes[boxusers.length -1][0];
+            delete boxes[boxusers.length -1][1];
+            delete boxes[boxusers.length -1][2];
+            delete boxes[boxusers.length -1][3];
+            boxusers.length--;
+            boxes.length--;
+            return true;
+        }
+    }
+    function exchangeItem(address _to) public returns (bool success){
+        bool frombox = false;
+        bool tobox = false;
+        uint fromboxchecknum = 0;
+        uint toboxchecknum = 0;
+        uint fromboxnum = 0;
+        uint toboxnum = 0;
+        for(uint boxnumber = 0;boxnumber < boxusers.length;boxnumber++){
+            if(boxusers[boxnumber][0] == msg.sender && boxusers[boxnumber][1] == _to){
+                fromboxchecknum = boxnumber;
+                frombox = true;
+            }
+            else if(boxusers[boxnumber][1] == msg.sender && boxusers[boxnumber][0] == _to){
+                toboxchecknum = boxnumber;
+                tobox = true;
+            }
+        }
+        if(frombox == true && tobox == true && boxes[fromboxchecknum][3] == 1 && boxes[toboxchecknum][3] == 1){
+            emit Exchange(msg.sender, _to, 0, 0, 0, "Exchange");
+            for(uint boxnumber_f = 0;boxnumber_f < boxusers.length;boxnumber_f++){
+                if(boxusers[boxnumber_f][0] == msg.sender && boxusers[boxnumber_f][1] == _to){
+                    fromboxnum = boxnumber_f;
+                }
+            }
+            balances[_to] += boxes[fromboxnum][0];
+            item1[_to] += boxes[fromboxnum][1];
+            item2[_to] += boxes[fromboxnum][2];
+            for (uint i = fromboxnum; i < boxusers.length-1; i++) {
+                boxusers[i][0] = boxusers[i+1][0];
+                boxusers[i][1] = boxusers[i+1][1];
+                boxes[i][0] = boxes[i+1][0];
+                boxes[i][1] = boxes[i+1][1];
+                boxes[i][2] = boxes[i+1][2];
+                boxes[i][3] = boxes[i+1][3];
+            }
+            delete boxusers[boxusers.length -1][0];
+            delete boxusers[boxusers.length -1][1];
+            delete boxes[boxusers.length -1][0];
+            delete boxes[boxusers.length -1][1];
+            delete boxes[boxusers.length -1][2];
+            delete boxes[boxusers.length -1][3];
+            boxusers.length--;
+            boxes.length--;
+            /*上方為自方交換給對方，下方為對方交換給自方*/
+            for(uint boxnumber_t = 0;boxnumber_t < boxusers.length;boxnumber_t++){
+                if(boxusers[boxnumber_t][1] == msg.sender && boxusers[boxnumber_t][0] == _to){
+                    toboxnum = boxnumber_t;
+                }
+            }
+            balances[msg.sender] += boxes[toboxnum][0];
+            item1[msg.sender] += boxes[toboxnum][1];
+            item2[msg.sender] += boxes[toboxnum][2];
+            for (uint l = toboxnum; l < boxusers.length-1; l++) {
+                boxusers[l][0] = boxusers[l+1][0];
+                boxusers[l][1] = boxusers[l+1][1];
+                boxes[l][0] = boxes[l+1][0];
+                boxes[l][1] = boxes[l+1][1];
+                boxes[l][2] = boxes[l+1][2];
+                boxes[l][3] = boxes[l+1][3];
+            }
+            delete boxusers[boxusers.length -1][0];
+            delete boxusers[boxusers.length -1][1];
+            delete boxes[boxusers.length -1][0];
+            delete boxes[boxusers.length -1][1];
+            delete boxes[boxusers.length -1][2];
+            delete boxes[boxusers.length -1][3];
+            boxusers.length--;
+            boxes.length--;
+            return true;
+        }
+    }
+    function approve(address _spender, uint256 _value) public returns (bool success) {
+        allowed[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value);
+        return true;
+    }
+    function allowance(address _owner, address _spender) public view returns (uint256 remaining) {
+        return allowed[_owner][_spender];
+    }
+    function setPrice(uint _price) public onlyOwner {
+        buyPrice = _price;
+    }
+    function buyBalance() public payable {
+        uint amount;
+        amount = (msg.value / weiToEther) * buyPrice * 10 ** uint256(decimals);
+        require(balances[owner] >= amount);
+        balances[msg.sender] += amount;
+        balances[owner] -= amount;
+        emit Transfer(owner, msg.sender, amount);
+    }
+    function buyItem1() public payable {
+        uint amount;
+        amount = (msg.value / weiToEther) * buyPricei1 * 10 ** uint256(decimals);
+        require(item1[owner] >= amount);
+        item1[msg.sender] += amount;
+        item1[owner] -= amount;
+        emit Exchange(owner, msg.sender, 0, amount, 0, "BuyItem1");
+    }
+    function buyItem2() public payable {
+        uint amount;
+        amount = (msg.value / weiToEther) * buyPricei2 * 10 ** uint256(decimals);
+        require(item2[owner] >= amount);
+        item2[msg.sender] += amount;
+        item2[owner] -= amount;
+        emit Exchange(owner, msg.sender, 0, 0, amount, "BuyItem2");
+    }
+    function withdraw(uint amount) public onlyOwner {
+        owner.transfer(amount * weiToEther);
+    }
+    function deleteContract() public onlyOwner {
+        selfdestruct(owner);
+    }
+    function enter(uint256 _value) public returns (bool success) {
+        uint256 amountCount = 0;
+        require(balances[msg.sender] >= _value * 100);
+	    balances[msg.sender] -= _value * 100;
+	    balances[raisesOwner] += _value * 100;
+	    for(amountCount = 0;amountCount < _value;amountCount++){
+	        players.push(msg.sender);
+	    }
+        emit Transfer(msg.sender, raisesOwner, _value * 100);
+        return true;
+    }
+    function random() private view returns (uint) {
+        return uint(keccak256(block.difficulty, now, players));
+    }
+    function refund() public returns (bool success) {
+        uint256 peopleCount = 0;
+        require(balances[raisesOwner] >= players.length * 100);
+	    for(peopleCount = 0;peopleCount < players.length;peopleCount++){
+	        balances[raisesOwner] -= 100;
+	        balances[players[peopleCount]] += 100;
+	        emit Transfer(raisesOwner, players[peopleCount], 100);
+	    }
+        return true;
+    }
+    function pickWinner() public onlyOwner {
+        uint index = random() % players.length;
+        balances[raisesOwner] -= players.length * 100;
+        balances[players[index]] += players.length * 100;
+        emit  Transfer(raisesOwner, players[index], players.length * 100);
+        players = new address[](0);
+    }
+    function lookMoney() public view returns (uint256 balance) {
+        return balances[raisesOwner];
+    }
+    function lookPlayers(uint number) public view returns (address _player) {
+        return players[number];
+    }
+}
