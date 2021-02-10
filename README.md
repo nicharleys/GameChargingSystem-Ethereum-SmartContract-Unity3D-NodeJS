@@ -49,12 +49,9 @@
  </div>
  
  
- 
- 
- 
 # II、環境建置
 <div>
-   <h3 styles={font-weight:bold;}>(1)安裝NodeJS</<h3> 
+   <h3 styles={font-weight:bold;}>安裝NodeJS</<h3> 
 </div> 
    
 <div>    
@@ -70,58 +67,10 @@
 </div>   
 
 <div>
-   <h3 styles={font-weight:bold;}>(5)React Native安裝</<h3> 
-</div> 
-   
-<div> 
-<table border="1">
-    <tr>
-        <td>
-            <div>
-               <b>1.</b><br>
-                 <strong font-size:13px;> 本機-->右鍵內容-->進階設定-->環境變數-->  </strong> <br>
-               <strong font-size:13px;> 新增變數名稱：ANDROID_HOME-->C:\Users\XXX\AppData\Local\Android\SDK </strong> 
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-
-<div> 
-<table border="1">
-    <tr>
-        <td>
-            <div>
-               <b>2.</b><br>
-                 <strong font-size:13px;> 本機-->右鍵內容-->進階設定-->環境變數-->  </strong> <br>
-               <strong font-size:13px;> 新增變數名稱：JAVA_HOME-->C:\Program Files\Java\jdk1.8.0_162 </strong> 
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-
-<div> 
-<table border="1">
-    <tr>
-        <td>
-            <div>
-               <b>3.</b><br>
-                 <strong font-size:13px;> 選擇安裝位置 輸入 npm install –g react-native-cli  </strong> 
-           </div>
-        </td>
-    </tr>
-</table>
-</div>   
-
-
-<br>
-<br>
-<div>
-   <h2 styles={font-weight:bold;}>本專案為使用NodeJS串接</<h3> 
+   <h2 styles={font-weight:bold;}>本專案使用Ethereum建置</<h3> 
 </div>
 <div>
-   <h3 styles={font-weight:bold;}> React Native連結手機模擬器</<h3> 
+   <h3 styles={font-weight:bold;}> Ethereum 私有鏈建立</<h3> 
 </div> 
 <div>  
 <div>    
@@ -130,12 +79,13 @@
         <td>
             <div>
             <b>1.</b><br>
-            <strong font-size:13px;> cmd到需您需要製作專案的資料位置</strong>
+            <strong font-size:13px;> 透過網址安裝Go Ethereum</strong>
            </div>
         </td>
     </tr>
 </table>
 </div>
+  https://geth.ethereum.org/downloads/
 <div>    
 <table border="1">
     <tr>
@@ -191,7 +141,7 @@
 
    
 <div>
-   <h3 styles={font-weight:bold;}> EXPO連線手機模擬器</<h3> 
+   <h3 styles={font-weight:bold;}> NodeJS 插件安裝</<h3> 
 </div> 
 <div>    
 <table border="1">
@@ -291,15 +241,21 @@
 </div>
 
 
-
-
+<div>
+   <h3 styles={font-weight:bold;}> Photon Cloud 設定</<h3> 
+</div> 
+https://www.photonengine.com/zh-TW/photon
+<div>
+   <h3 styles={font-weight:bold;}> Smart Contract 發佈</<h3> 
+</div> 
+https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.7.4+commit.3f05b770.js&appVersion=0.7.7
 
 
 <br>
 <br>
 
 
-# III、建置流程
+# III、啟動流程
 
 <table border="1">
     <tr>
@@ -429,7 +385,7 @@
 
 
 # IV、文件說明
-<span id="head1">  <h2> 資料庫設置 </h2> </span>
+<span id="head1">  <h2> 智能合約設計 </h2> </span>
 
 <div> 
 <strong font-size:13px;>
@@ -801,93 +757,6 @@ https://www.apachefriends.org/zh_tw/index.html
             <b>4.</b><br>
             <b>select_camstate</b><br/>
             <b>上傳使用者切換頁面的狀態，提供頁面切換時的更新查詢。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<br>
-<br>
-<span id="head3">  <h2> Python </h2> </span>
-<div> 
-<strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 本系統不採用官方釋出的TensorFlow.js，原因在於調整上不自由，且出來的結果太過陽春，而將模型塞入手機中，必須使用Tiny版本，辨識的結果勢必不如複雜的模型結果，而使用資料庫作為連線橋梁，即可以在手機上顯示電腦的結果。
-</strong>
-</div> 
-
-<div>
-   <h3 styles={font-weight:bold;}>python_test.py</<h3> 
-</div>
-   
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <b>連線至本機端MYSQL</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>2.</b><br>
-            <b>解決了資料庫時間差的錯誤</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>3.</b><br>
-            <b>將base64轉為圖片</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>4.</b><br>
-            <b>放進模型辨識成果</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>5.</b><br>
-            <b>產製出一個透明背景的圖片將結果劃入透明圖片中</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>6.</b><br>
-            <b>將繪製完的透明圖片轉化為base64，並上傳資料庫</b>
            </div>
         </td>
     </tr>
