@@ -14,7 +14,8 @@
 # I、介紹
 
 <div>
-   <h3 styles={font-weight:bold;}>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp這是一個使用React Native來實現遠端連線深度學習的系統，讓使用者可以只需要攜帶手機，即可在室外使用最原生的模型，享受最快且無負擔的辨識結果，本系統以連結YOLOv 3為例。</<h3> 
+   <h3 styles={font-weight:bold;}>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp這是一個使用乙太坊的智能合約功能結合Unity3D遊戲來實現的交易系統，串接方式是由NodeJS所寫成Dapp做為資料的傳接過程，並傳送至Photon Cloud伺服器以提供多人參與交易，藉由Unity3D的輸出結果可以決定使用的平台，讓使用者可以在不同的環境下使用智能合約功能，並以高效率的交易速度來達成虛擬貨幣以及合約代幣的交易，本系統以提供串接方式為例。
+</<h3> 
 </div> 
 
 
