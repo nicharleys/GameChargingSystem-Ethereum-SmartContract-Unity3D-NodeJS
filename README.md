@@ -14,7 +14,7 @@
 # I、介紹
 
 <div>
-   <h3 styles={font-weight:bold;}>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp這是一個使用乙太坊的智能合約功能結合Unity3D遊戲來實現的交易系統，串接方式是由NodeJS所寫成Dapp做為資料的傳接過程，並傳送至Photon Cloud伺服器以提供多人參與交易，藉由Unity3D的輸出結果可以決定使用的平台，讓使用者可以在不同的環境下使用智能合約功能，並以高效率的交易速度來達成虛擬貨幣以及合約代幣的交易，本系統以串接方式為例。
+   <h3 styles={font-weight:bold;}>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        這是一個使用乙太坊的智能合約功能結合Unity3D遊戲來實現的交易系統，串接方式是由NodeJS所寫成Dapp做為資料的傳接過程，並傳送至Photon Cloud伺服器以提供多人參與交易，藉由Unity3D的輸出結果可以決定使用的平台，讓使用者可以在不同的環境下使用智能合約功能，並以高效率的交易速度來達成虛擬貨幣以及合約代幣的交易，本系統以串接方式為例。
 </<h3> 
 </div> 
 
@@ -26,19 +26,19 @@
         <td>
             <div>
             <h3><b>優點:</b><br></h3>
-            <b>&nbsp; 1.可以自由更換環境 </b><br>
-            <b>&nbsp; 2.不影響交易速度下運行乙太坊 </b><br>
-            <b>&nbsp; 3.保有高度交易安全性 </b><br>
-            <b>&nbsp; 4.共用此系統可共通交易貨幣 </b><br>
-            <b>&nbsp; 5.多人連線可自行選擇交易對象 </b>
+            <b>&nbsp; 1.可以自由更換環境。 </b><br>
+            <b>&nbsp; 2.不影響交易速度下運行乙太坊。 </b><br>
+            <b>&nbsp; 3.保有高度交易安全性。 </b><br>
+            <b>&nbsp; 4.共用此系統可共通交易貨幣。 </b><br>
+            <b>&nbsp; 5.多人連線可自行選擇交易對象。 </b>
            </div>
         </td>
         <td>
             <div>
             <h3><b>缺點:</b><br></h3><br>
-            <b>&nbsp; 1.必須要有網路 </b><br>
-            <b>&nbsp; 2.必須要有主機作為伺服器 </b><br>
-            <b>&nbsp; 3.交易代幣需要購買或是挖礦獲取 </b>
+            <b>&nbsp; 1.必須要有網路。 </b><br>
+            <b>&nbsp; 2.必須要有主機作為伺服器。 </b><br>
+            <b>&nbsp; 3.交易代幣需要購買或是挖礦獲取。 </b>
             <br><br><br>
            </div>
         </td>
@@ -49,107 +49,15 @@
  </div>
  
  
-# II、環境建置
-<div>
-   <h3 styles={font-weight:bold;}>安裝NodeJS</<h3> 
-</div> 
-   
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-               <strong font-size:13px;>本機-->右鍵內容-->進階設定-->環境變數-->系統變數(path)-->C:\Program Files\nodejs\ </strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>   
+# II、啟動流程
 
-<div>
-   <h2 styles={font-weight:bold;}>本專案使用Ethereum建置</<h3> 
-</div>
-<div>
-   <h3 styles={font-weight:bold;}> Ethereum 私有鏈建立</<h3> 
-</div> 
-<div>  
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
             <b>1.</b><br>
-            <strong font-size:13px;> 透過網址安裝Go Ethereum</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-  https://geth.ethereum.org/downloads/
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>2.</b><br>
-            <strong font-size:13px;> 輸入react-native init XXX(專案資料夾名稱)來創建專案</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>3.</b><br>
-            <strong font-size:13px;> 輸入cd 您專案資料夾的名稱。</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>4.</b><br>
-            <strong font-size:13px;> cmd輸入react-native run-android來開啟模擬器內的React Native專案</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div> 
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>5.</b><br>
-            <strong font-size:13px;> 等待模擬器畫面出現Welcome to React Native!，代表整體建置成功</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div> 
-
-
-<br>
-<br>
-
-   
-<div>
-   <h3 styles={font-weight:bold;}> NodeJS 插件安裝</<h3> 
-</div> 
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <strong font-size:13px;> cmd到需您需要製作專案的資料位置</strong>
+            <strong font-size:13px;>安裝並啟動私有鏈。</strong>
            </div>
         </td>
     </tr>
@@ -161,7 +69,7 @@
         <td>
             <div>
             <b>2.</b><br>
-            <strong font-size:13px;> 輸入npm install expo-cli –global</strong>
+            <strong font-size:13px;>透過Remix Solidity發佈智能合約。</strong>
            </div>
         </td>
     </tr>
@@ -173,7 +81,7 @@
         <td>
             <div>
             <b>3.</b><br>
-            <strong font-size:13px;> 輸入expo init XXX(專案資料夾名稱) 。</strong>
+            <strong font-size:13px;>更換NodeJS的連線網址。</strong>
            </div>
         </td>
     </tr>
@@ -185,203 +93,772 @@
         <td>
             <div>
             <b>4.</b><br>
-            <strong font-size:13px;> 輸入cd 您專案資料夾的名稱</strong>
+            <strong font-size:13px;>更換Dapp內的智能合約內容。</strong>
            </div>
         </td>
     </tr>
 </table>
-</div>
+</div> 
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
             <b>5.</b><br>
-            <strong font-size:13px;>開啟Android Studio</strong>
+            <strong font-size:13px;>設置Photon Cloud伺服器。</strong>
            </div>
         </td>
     </tr>
 </table>
-</div>
+</div> 
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
             <b>6.</b><br>
-            <strong font-size:13px;>開啟AVD Manager</strong>
+            <strong font-size:13px;>安裝並啟動NodeJS。</strong>
            </div>
         </td>
     </tr>
 </table>
-</div>
+</div> 
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
             <b>7.</b><br>
-            <strong font-size:13px;>cmd輸入expo start</strong>
+            <strong font-size:13px;>啟動Unity3D遊戲。</strong>
            </div>
         </td>
     </tr>
 </table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>8.</b><br>
-            <strong font-size:13px;>EXPO網頁控制介面點選Run on Android device/emulator</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-
-
-<div>
-   <h3 styles={font-weight:bold;}> Photon Cloud 設定</<h3> 
 </div> 
-https://www.photonengine.com/zh-TW/photon
-<div>
-   <h3 styles={font-weight:bold;}> Smart Contract 發佈</<h3> 
-</div> 
-https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.7.4+commit.3f05b770.js&appVersion=0.7.7
-
 
 <br>
 <br>
 
+# III、環境建置
 
-# III、啟動流程
-
+<div>
+   <h3 styles={font-weight:bold;}>(1) Geth安裝</<h3> 
+</div>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 1.</b><br>
-            <b>載入本文件，並將MyWork/expo 與 MyWork/expo-shared 改為MyWork/.expo 與 MyWork/.expo-shared。 </b>
+            <b>透過 Go Ethereum網址安裝 Geth。</b>
            </div>
         </td>
     </tr>
 </table>
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 2.</b><br>
-            <b>在MyWork文件中開啟cmd，並輸入 npm install  --> 此時文件內會生成node_modules。 </b>
+            <b>Geth 安裝過程要勾選 Development tools。</b>
            </div>
         </td>
     </tr>
 </table>
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 3.</b><br>
-             <b>需要開啟Xampp資料庫並設定欄位。 </b>
+            <b>建立一個新帳號 geth --datadir “自訂資料夾名稱” account new。</b><br>
+            <b>範例的資料夾名稱： Ethtest_ERC20。</b>
            </div>
         </td>
     </tr>
 </table>
-
---> 環境設定連結:     [請點我](#head1)
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 4.</b><br>
-            <b>在MyWork文件中開啟cmd，並輸入 node server.js -->此時會出現 Open the database connection! </b>
+            <b>使用 Geth工具 puppeth 設定創世區塊。</b>
            </div>
         </td>
     </tr>
 </table>
+<br>
+<br>
 
---> [server.js文件說明連結](#head2) 
-<br>
-<br>
+<div>
+   <h3 styles={font-weight:bold;}>(2) Puppeth設定</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>開啟Go Ethereum的工具 puppeth 設定創世區塊。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>輸入自訂的網路名稱。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>輸入2，設定創世區塊的內容。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>自行選擇使用PoA或PoW共識機制。</b>
+           </div>
+        </td>
+    </tr>
+</table>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 5.</b><br>
-            <b>開啟ngrok，輸入本機ip位置，並在ngrok裡輸入 ngrok htpp http://自己的IP:3000  ， 會出現對外的網址，將其放入src / screen / Detail.js 中第17行。 </b>
+            <b>設定區塊產出時間，直接空白輸入則為預設15秒。</b>
            </div>
         </td>
     </tr>
 </table>
-
---> [ngrok連結說明參見股票機器人](https://github.com/bruce601080102/Line_Web_Stock)
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 6.</b><br>
-            <b>請至YOLO官網點選YOLOv3-416中weights的按鈕，並將權重檔放在Expo _ ReactNative _ ObjectDection _ CloudConnection / MyWork / Object_Dection / yolov3 / checkpoints / 中的資料夾。 </b>
+            <b>設定挖礦帳號，輸入在Geth建立的帳號，若不再新增則直接空白輸入。</b>
            </div>
         </td>
     </tr>
 </table>
-
---> [權重檔連結下載](https://pjreddie.com/darknet/yolo/) 
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 7.</b><br>
-            <b>建置tensorflow2.x版環境，需要建置anaconda虛擬環境，並在環境中點選Open Terminal，並到Expo _ ReactNative _ ObjectDection _ CloudConnection / MyWork / Object_Dection / 中，輸入`python python_test.py`，即可連線使用YOLO模型 </b>
+            <b>給予帳號乙太幣，若不需要則直接空白輸入。</b>
            </div>
         </td>
     </tr>
 </table>
-
---> [強化YOLO辨識能力連結](https://github.com/bruce601080102/YOLO_v3-splite)
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
-            <b> 8.</b><br> 
-            <b>在http://localhost:19002/ 中會出現expo頁面，並將會看見Starting Metro Bundler.字眼，表示建置已成功，點選Connection中Tunnel，將會出現一張QR code。 </b>
+            <b> 8.</b><br>
+            <b>設定Chain ID，請避開常用ID，範例使用8888。</b>
            </div>
         </td>
     </tr>
 </table>
-
-<br>
-<br>
 <table border="1">
     <tr>
         <td>
             <div>
-            <b> 9.</b><br> 
-             <b>在實體手機上開啟expo app，並掃描QR code，即可及時使用此功能。 </b>
+            <b> 9.</b><br>
+            <b>輸入2，管理現有創世區塊。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 10.</b><br>
+            <b>輸入2，導出創世區塊的配置。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 11.</b><br>
+            <b>輸入檔案導出位置，若空白輸入則在C槽。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 12.</b><br>
+            <b>導出genesis.json檔案。</b>
            </div>
         </td>
     </tr>
 </table>
 <br>
-<div align="center">
-   <img src="https://github.com/bruce601080102/Expo_ReactNative_ObjectDection_CloudConnection/blob/master/img/137325.jpg"  width="300" height="500" " />       
-</div> 
 <br>
-<br>
-                                                                                                                                                     
 
+
+<div>
+   <h3 styles={font-weight:bold;}>(3) 私有鏈節點啟動</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>放置genesis.json到要設置的資料夾，建議放在Geth帳號的上一層。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>cmd到要設置的資料夾。</b><br>
+            <b>範例的資料夾： Ethtest_ERC20。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>輸入geth --datadir “資料夾名稱” init genesis.json，啟動創世區塊。</b><br>
+            <b>範例的資料夾名稱： Ethtest_ERC20。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>cmd到設置資料夾內的geth資料夾。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 5.</b><br>
+            <b>輸入啟動指令啟動私有鏈。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+
+<div>
+   <h3 styles={font-weight:bold;}>(4) 發佈智能合約</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>啟動私有鏈。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>開啟Remix Solidity的網站。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>選擇編輯器版本，範例為0.4.24+commit .e67f0147。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>複製範例檔案中的 " 智能合約程式碼 " 內容。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 5.</b><br>
+            <b>新增空白程式，將複製內容貼至Remix編輯器內，並取名ERC20_token。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 6.</b><br>
+            <b>複製範例檔案中的 " 智能合約程式碼_函式 " 內容。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 7.</b><br>
+            <b>新增空白程式，將複製內容貼至Remix編輯器內，並取名ERC20_interface。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 8.</b><br>
+            <b>編輯器選項選擇發佈Run。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 9.</b><br>
+            <b>環境Environment選擇Web3 Provider，並輸入IP位置:私有鏈Port號。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 10.</b><br>
+            <b>選擇發佈帳號。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 11.</b><br>
+            <b>程式碼發佈選擇ERC20_token。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 12.</b><br>
+            <b>Deploy內輸入以下資料：</b><br>
+            <b>總代幣輛, 代幣1價值, 代幣2價值, 代幣3價值, "代幣名稱", "說明文字", "發佈帳號"</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 13.</b><br>
+            <b>按下Deploy發佈智能合約。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 14.</b><br>
+            <b>紀錄發佈後產出的智能合約地址。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 15.</b><br>
+            <b>編輯器選項選擇編輯Compile。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 16.</b><br>
+            <b>點選ABI或Details的ABI複製智能合約ABI資料。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 17.</b><br>
+            <b>紀錄智能合約ABI資料。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 18.</b><br>
+            <b>更換合約相關資料。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(5)更換Dapp合約內容</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>複製範例檔案的NodeJS文件至自訂專案位置。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>修改NodeJS文件的Dapp文件的index.js檔。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>重設連線網址，port號需依照私有鏈的啟動指令， 範例如下：</b><br>
+            <b>new web3.providers.HttpProvider('IP位置: Port號'));</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>修改Dapp文件的contract文件內的contract.js檔。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 5.</b><br>
+            <b>將智能合約ABI覆蓋至ABI:[]內。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 6.</b><br>
+            <b>將智能合約地址覆蓋至底部的address:””內。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 7.</b><br>
+            <b>設置與Dapp功能對應的Photon Cloud設定。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(6) Photon Cloud設定</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>申請帳號。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>建立應用程式。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>Photon Type類型為Photon PUN。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>名稱範例為Game。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 5.</b><br>
+            <b>網址為本機IP位置。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 6.</b><br>
+            <b>建立Webhooks功能，版本為1.2。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 7.</b><br>
+            <b>輸入1筆Key，Key值：BaseUrl，Value值：IP:3000。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 8.</b><br>
+            <b>輸入1筆Key，Key值：ListenEvent，Value值：IP:3000/ ListenEvent。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 9.</b><br>
+            <b>輸入1筆Key，Key值：Transform，Value值：IP:3000/ Transform。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 10.</b><br>
+            <b>安裝NodeJS相關工具。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(7) NodeJS安裝</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>透過網址安裝NodeJS。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>設置環境變數：</b><br>
+            <b>本機-->右鍵內容-->進階設定-->環境變數-->系統變數(path)-->C:\Program Files\nodejs\</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(8) Photon Cloud設定</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>在NodeJS範例檔案中找到以下檔案：</b><br>
+            <b>package-lock.json。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>cmd到放置檔案的資料位置。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>輸入npm install 。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>在NodeJS範例檔案內的Dapp資料夾中找到以下檔案：</b><br>
+            <b>package.json、package-lock.json。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 5.</b><br>
+            <b>cmd到放置檔案的資料位置。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 6.</b><br>
+            <b>輸入npm install 。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 7.</b><br>
+            <b>啟動NodeJS的Dapp檔。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 8.</b><br>
+            <b>啟動Unity3D遊戲</b>
+           </div>
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>                             
 
 
 # IV、文件說明
@@ -389,19 +866,48 @@ https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=solj
 
 <div> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 本系統使用XAMPP作為Apache HTTP伺服器，並以MySQL功能作為資料庫，以此處理移動端在執行拍照功能後的圖片存取，因此在執行系統前需要建置資料庫環境，建置內容包含建立資料庫與建立資料表，
-過程需要使用NodeJS來建立頁面，藉此才能夠以Post、Get的方式傳輸移動端的資料內容。
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp本系統使用Go Ethereum的Geth作為私有鏈伺服器，以此做為資料存取的儲存空間，因此在執行系統前需要建置私有鏈環境，建置內容包含選擇工作證明類型、產出區塊時間、Chain ID設定，過程需要使用puppeth來建立創世區塊，藉此才能提供Geth來啟動私有鏈。
 </strong>
 </div> 
 <br/>
 <div> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp XAMPP安裝版本為7.4.9，安裝作業系統為Windows，若建置過程失敗或介面問題可以參考此版本，以下是XAMPP的下載網址：
-https://www.apachefriends.org/zh_tw/index.html
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp若不想設定Puppeth，可以在範例的Geth資料夾內找到創世區塊配置genesis.json。
 </strong>
 </div>
+<br/>
+<div> 
+<strong font-size:13px;>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum安裝版本為1.8.16，NodeJS安裝版本為8.12.0，安裝作業系統為Windows 10，若建置過程失敗或介面問題可以參考此版本
+</strong>
+</div>
+<br/>
+<div> 
+<strong font-size:13px;>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum的下載網址： <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://geth.ethereum.org/downloads/
+</strong>
+</div>
+<br/>
+<div> 
+<strong font-size:13px;>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNodeJS的下載網址：<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://nodejs.org/download/release/v8.12.0/
+</strong>
+</div>
+<br/>
+<div> 
+<strong font-size:13px;>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRemix Solidity的舊網址：<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://remix.ethereum.org/#appVersion=0.7.7&optimize=false&version=soljson-v0.5.1+commit.c8a2cb62.js
+</strong>
+</div>
+<br/>
+<br/>
+
+
 <div>
-   <h3 styles={font-weight:bold;}>(1)XAMPP設定</<h3> 
+   <h3 styles={font-weight:bold;}>(1) Geth指令</<h3> 
 </div>
 
 <table border="1">
@@ -409,20 +915,36 @@ https://www.apachefriends.org/zh_tw/index.html
         <td>
             <div>
             <b>1.</b><br>
-            <b>安裝後開啟XAMPP Controll Panal介面，點選Apache的Config選項，並選擇phpMyAdmin(config.ini.php)，在設定中找到以下三行:</b><br>
-            <b>$cfg['Servers'][$i]['auth_type'] = 'config';</b><br> 
-            <b>$cfg['Servers'][$i]['user'] = 'root';</b><br> 
-            <b>$cfg['Servers'][$i]['password'] = '';</b>
+            <b>啟動指令，請注意networkid需與創世區塊的Chain ID一致。</b><br>
+            <b>範例指令：geth --rpc --rpcport 6345 --rpcaddr 0.0.0.0 --datadir ./Ethtest_ERC20 --rpccorsdomain="*" --rpcapi="eth,net,web3,personal" --port 30303 --networkid 8888 --nodiscover console。</b>
            </div>
         </td>
     </tr>
 </table>   
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(2) 私有鏈指令</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>1.</b><br>
+            <b>若要解鎖私有鏈主帳號，則輸入指令解鎖，指令如下所示：</b><br>
+            <b>指令：personal.unlockAccount(eth.accounts[0])</b>
+           </div>
+        </td>
+    </tr>
+</table>
 <table border="1">
     <tr>
         <td>
             <div>
             <b>2.</b><br>
-            <b>將auth_type項目中的config改為cookie，接著將密碼輸入至password的右方單引號後儲存。</b>
+            <b>若要新增私有鏈帳號，則輸入指令新增，指令如下所示：</b><br/>
+            <b>指令：personal.newAccount()</b>
            </div>
         </td>
     </tr>
@@ -432,8 +954,8 @@ https://www.apachefriends.org/zh_tw/index.html
         <td>
             <div>
             <b>3.</b><br>
-            <b>開啟XAMPP Controll Panal介面，點選MySQL的Config選項，並選擇my.ini，在設定中找到以下一行:</b><br/>
-            <b>max_allowed_packet = 16M</b>
+            <b>若要更改私有鏈挖礦的帳號，則輸入指令更改，指令如下所示：</b><br>
+            <b>指令：miner.setEtherbase(帳號)</b>
            </div>
         </td>
     </tr>
@@ -443,7 +965,109 @@ https://www.apachefriends.org/zh_tw/index.html
         <td>
             <div>
             <b>4.</b><br>
-            <b>將數值改為1024M。</b>
+            <b>關閉私有鏈需要輸入指令，若直接關閉可能會造成私有鏈回朔或是重製，指令如下所示：</b><br>
+            <b>指令：exit</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(3) NodeJS指令</<h3> 
+</div>
+
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>1.</b><br>
+            <b>cmd輸入指令啟動NodeJS，開啟位置與指令如下所示：</b><br>
+            <b>開啟位置： NodeJS\Dapp</b><br>
+            <b>指令： node index.js</b>
+           </div>
+        </td>
+    </tr>
+</table>   
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(4) NodeJS頁面說明</<h3> 
+</div>
+<div> 
+<strong font-size:13px;>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在server.js的內容可以找到app.post開頭的函式，各函式名稱代表連接網址，若有更動則需要對應更改Detail.js內的設置網址，因此建議不作更改，各項說明如下所示：</strong>
+</div>
+<br/>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>1.</b><br>
+            <b>ListenEvent</b><br/>
+            <b>監聽區塊編號，區塊編號更新就自動發送查詢功能，以此達到自動更新的效果。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>2.</b><br>
+            <b>Transform</b><br/>
+            <b>執行合約功能，根據不同的傳送狀態來執行對應的私有鏈指令。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+<div>
+   <h3 styles={font-weight:bold;}>(5) NodeJS合約執行說明</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>1.</b><br>
+            <b>Allowance</b><br/>
+            <b>信用查詢，查詢給予他人或被給予的信用額度。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>2.</b><br>
+            <b>BalanceOf</b><br/>
+            <b>代幣查詢，查詢指定帳號內的剩餘代幣。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>3.</b><br>
+            <b>LookExchange_Self</b><br/>
+            <b>交換查詢，查詢自方與他方的交易內容。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>4.</b><br>
+            <b>LookExchange_Other</b><br/>
+            <b>交換查詢，查詢他方與自方的交易內容。</b>
            </div>
         </td>
     </tr>
@@ -453,7 +1077,8 @@ https://www.apachefriends.org/zh_tw/index.html
         <td>
             <div>
             <b>5.</b><br>
-            <b>設定完成後，啟動XAMPP，並按下Apache與MySQL的Start選項。</b>
+            <b>LookLottery</b><br/>
+            <b>樂透查詢，查詢樂透擁有者、樂透集資金、玩家帳號。</b>
            </div>
         </td>
     </tr>
@@ -463,25 +1088,8 @@ https://www.apachefriends.org/zh_tw/index.html
         <td>
             <div>
             <b>6.</b><br>
-            <b>打開網頁輸入網址：127.0.0.1 或 localhost，並點選phpMyAdmin便可進入操作頁面。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-
-<div>
-   <h3 styles={font-weight:bold;}>(2)資料表設定</<h3> 
-</div>
-<div> 
-<strong font-size:13px;>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 在創建資料表前需要先創建資料庫，本系統使用的資料庫名稱為banana_test，資料表的名稱需要對應NodeJS頁面的內容設定，這邊的資料表名稱僅供參考，如果需要請自行更改，資料庫與資料表的創建方式如下所示：</strong>
-</div>
-<br/>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <b>點選左邊最上方的新增選項，並輸入資料庫名稱與選擇編碼與排序類型。</b>
+            <b>UnlockAccount</b><br/>
+            <b>解鎖帳號，解鎖帳號在私有鏈的交易功能。</b>
            </div>
         </td>
     </tr>
@@ -490,142 +1098,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>2.</b><br>
-            <b>創建資料庫後，點選左邊的資料庫名稱，並點選該資料庫的新增選項，之後依照下方的資料表內容來新增資料表名稱與欄位內容。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<br/>
-<div> 
-<strong font-size:13px;>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 資料表總共分為三個部分，各別為banana、banana_python、controll_cam，類型皆為InnoDB，編碼與排序皆為utf8_unicode_ci，以下是各部分的欄位說明：</strong>
-</div>
-<br/>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <b>banana 資料表 & banana_python 資料表</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td><div><b>名稱</b><br></div></td>
-        <td><div><b>型態</b><br></div></td>
-        <td><div><b>長度值</b><br></div></td>
-        <td><div><b>預設值</b><br></div></td>
-        <td><div><b>編碼與排序</b><br></div></td>
-        <td><div><b>屬性</b><br></div></td>
-        <td><div><b>A_I</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>id</b><br></div></td>
-        <td><div><b>INT</b><br></div></td>
-        <td><div><b>7</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>V</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>id_ran</b><br></div></td>
-        <td><div><b>INT</b><br></div></td>
-        <td><div><b>5</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>X</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>pic_num</b><br></div></td>
-        <td><div><b>INT</b><br></div></td>
-        <td><div><b>3</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>X</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>pic</b><br></div></td>
-        <td><div><b>mediumtext</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>utf8_unicode_ci</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>X</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>time</b><br></div></td>
-        <td><div><b>timestamp</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>CURRENT_TIMESTAMP</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>on updateCURRENT_TIMESTAMP</b><br></div></td>
-        <td><div><b>X</b><br></div></td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>2.</b><br>
-            <b>controll_cam 資料表</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td><div><b>名稱</b><br></div></td>
-        <td><div><b>型態</b><br></div></td>
-        <td><div><b>長度值</b><br></div></td>
-        <td><div><b>預設值</b><br></div></td>
-        <td><div><b>編碼與排序</b><br></div></td>
-        <td><div><b>屬性</b><br></div></td>
-        <td><div><b>A_I</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>id</b><br></div></td>
-        <td><div><b>INT</b><br></div></td>
-        <td><div><b>11</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>V</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>user</b><br></div></td>
-        <td><div><b>VARCHAR</b><br></div></td>
-        <td><div><b>10</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>utf8_unicode_ci</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>X</b><br></div></td>
-    </tr>
-    <tr>
-        <td><div><b>state</b><br></div></td>
-        <td><div><b>INT</b><br></div></td>
-        <td><div><b>1</b><br></div></td>
-        <td><div><b>0</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>無</b><br></div></td>
-        <td><div><b>X</b><br></div></td>
-    </tr>
-</table>
-<br/>
-<div> 
-<strong font-size:13px;>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp controll_cam 資料表創建後，請在該資料表內新增一筆資料，資料新增方式如下所示： </strong>
-</div>
-<br/>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <b>點選controll_cam 資料表，並點選上方SQL選項。</b>
+            <b>7.</b><br>
+            <b>ContractStatus</b><br/>
+            <b>合約查詢，查詢合約名稱、合約擁有者。</b>
            </div>
         </td>
     </tr>
@@ -634,22 +1109,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>2.</b><br>
-            <b>接著輸入INSERT INTO `banana`(`state`) VALUES (0)。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-
-<div id='head2'>
-   <h3 styles={font-weight:bold;}>(3)NodeJS頁面設定</<h3> 
-</div>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <b>在XAMPP設定內的更改需要對應NodeJS頁面，而在MySQL創建的資料庫名稱也需要對應，相關設定在server.js的內容可以找到。</b>
+            <b>8.</b><br>
+            <b>GiveApprove</b><br/>
+            <b>信用交易，提供他人信用額度，預給他方合約代幣。</b>
            </div>
         </td>
     </tr>
@@ -658,12 +1120,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>2.</b><br>
-            <b>打開server.js後，在內容中找到以下四行：</b><br/>
-            <b>host     : 'localhost',</b><br/>
-            <b>user     : 'root',</b><br/>
-            <b>password : '1234',</b><br/>
-            <b>database : 'banana_test'</b>
+            <b>9.</b><br>
+            <b>TwoPointDeal</b><br/>
+            <b>代幣交易，提供地址與地址間的單方代幣給予。</b>
            </div>
         </td>
     </tr>
@@ -672,8 +1131,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>3.</b><br>
-            <b>在user、password的項目中，輸入與XAMPP設定內一樣的名稱與密碼。</b>
+            <b>10.</b><br>
+            <b>PutExchange</b><br/>
+            <b>交換放置，放置代幣提供交換，並預先扣款額度。</b>
            </div>
         </td>
     </tr>
@@ -682,8 +1142,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>4.</b><br>
-            <b>在database的項目中，輸入MySQL創建的資料庫名稱。</b>
+            <b>11.</b><br>
+            <b>ExchangeStatus</b><br/>
+            <b>交換狀態，變更自方的交易狀態來告知他方交易。</b>
            </div>
         </td>
     </tr>
@@ -692,8 +1153,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>5.</b><br>
-            <b>儲存後關閉檔案。</b>
+            <b>12.</b><br>
+            <b>CancelExchange</b><br/>
+            <b>交換取消，取消與他方的交換內容。</b>
            </div>
         </td>
     </tr>
@@ -702,28 +1164,9 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>6.</b><br>
-            <b>cmd到server.js所在的資料位置。</b><br/>
-            <b>cmd輸入node server.js。</b><br/>
-            <b>即可開啟server.js檔，並且與資料庫連接</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<div>
-   <h3 styles={font-weight:bold;}>(4)NodeJS頁面說明</<h3> 
-</div>
-<div> 
-<strong font-size:13px;>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 在server.js的內容可以找到app.get或app.post開頭的函式，各函式名稱代表連接網址，若有更動則需要對應更改Detail.js內的設置網址，因此建議不作更改，各項說明如下所示：</strong>
-</div>
-<br/>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>1.</b><br>
-            <b>select</b><br/>
-            <b>查詢python處理辨識後所產生的錨點圖，並只搜尋最新一筆資料。</b>
+            <b>13.</b><br>
+            <b>ExchangeItem</b><br/>
+            <b>交換代幣，提供雙方同時交換不同額度的代幣。</b>
            </div>
         </td>
     </tr>
@@ -732,36 +1175,12 @@ https://www.apachefriends.org/zh_tw/index.html
     <tr>
         <td>
             <div>
-            <b>2.</b><br>
-            <b>select_camstate</b><br/>
-            <b>查詢使用者頁面切換的狀態，即時停止頁面更新的效果，防止程式效能降低。</b>
+            <b>14.</b><br>
+            <b>BuyLottery</b><br/>
+            <b>購買樂透，提供地址購買樂透登記。</b>
            </div>
         </td>
     </tr>
 </table>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>3.</b><br>
-            <b>select_camstate</b><br/>
-            <b>上傳手機所拍攝的圖片至MySQL資料庫，提供python處理辨識。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>4.</b><br>
-            <b>select_camstate</b><br/>
-            <b>上傳使用者切換頁面的狀態，提供頁面切換時的更新查詢。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-
-
-
+<br>
+<br>
