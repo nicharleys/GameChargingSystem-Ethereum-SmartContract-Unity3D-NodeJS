@@ -899,35 +899,43 @@
 <br/>
 <div> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum安裝版本為1.8.16，NodeJS安裝版本為8.12.0，安裝作業系統為Windows 10，若建置過程失敗或介面問題可以參考此版本
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum安裝版本為1.8.16，NodeJS安裝版本為8.12.0，安裝作業系統為Windows 10，若建置過程失敗或介面問題可以參考此版本。
 </strong>
 </div>
 <br/>
 <div id = 'download1'> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum的下載網址： <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://geth.ethereum.org/downloads/
+&nbsp&nbsp Go Ethereum的下載網址：
+
+https://geth.ethereum.org/downloads/
+
 </strong>
 </div>
 <br/>
 <div id = 'download2'> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRemix Solidity的舊網址：<br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://remix.ethereum.org/#appVersion=0.7.7&optimize=false&version=soljson-v0.5.1+commit.c8a2cb62.js
+&nbsp&nbsp Remix Solidity的舊網址：
+
+https://remix.ethereum.org/#appVersion=0.7.7&optimize=false&version=soljson-v0.5.1+commit.c8a2cb62.js
+
 </strong>
 </div>
 <br/>
 <div id = 'download3'> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhoton Cloud官方網址：<br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://www.photonengine.com/zh-TW/photon
+&nbsp&nbsp Photon Cloud官方網址：
+
+https://www.photonengine.com/zh-TW/photon
+
 </strong>
 </div>
 <br/>
 <div id = 'download4'> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNodeJS的下載網址：<br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://nodejs.org/download/release/v8.12.0/
+&nbsp&nbsp NodeJS的下載網址：
+
+https://nodejs.org/download/release/v8.12.0/
+
 </strong>
 </div>
 <br/>
