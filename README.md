@@ -887,19 +887,19 @@
 
 <div> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp本系統使用Go Ethereum的Geth作為私有鏈伺服器，以此做為資料存取的儲存空間，因此在執行系統前需要建置私有鏈環境，建置內容包含選擇工作證明類型、產出區塊時間、Chain ID設定，過程需要使用puppeth來建立創世區塊，藉此才能提供Geth來啟動私有鏈。
+本系統使用Go Ethereum的Geth作為私有鏈伺服器，以此做為資料存取的儲存空間，因此在執行系統前需要建置私有鏈環境，建置內容包含選擇工作證明類型、產出區塊時間、Chain ID設定，過程需要使用puppeth來建立創世區塊，藉此才能提供Geth來啟動私有鏈。
 </strong>
 </div> 
 <br/>
 <div> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp若不想設定Puppeth，可以在範例的Geth資料夾內找到創世區塊配置genesis.json。
+若不想設定Puppeth，可以在範例的Geth資料夾內找到創世區塊配置genesis.json。
 </strong>
 </div>
 <br/>
 <div> 
 <strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum安裝版本為1.8.16，NodeJS安裝版本為8.12.0，安裝作業系統為Windows 10，若建置過程失敗或介面問題可以參考此版本。
+Go Ethereum安裝版本為1.8.16，NodeJS安裝版本為8.12.0，安裝作業系統為Windows 10，若建置過程失敗或介面問題可以參考此版本。
 </strong>
 </div>
 <br/>
