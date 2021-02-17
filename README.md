@@ -905,7 +905,7 @@
 <br/>
 <div id = 'download1'> 
 <strong font-size:13px;>
-&nbsp&nbsp Go Ethereum的下載網址：
+Go Ethereum的下載網址：
 
 https://geth.ethereum.org/downloads/
 
@@ -914,7 +914,7 @@ https://geth.ethereum.org/downloads/
 <br/>
 <div id = 'download2'> 
 <strong font-size:13px;>
-&nbsp&nbsp Remix Solidity的舊網址：
+Remix Solidity的舊網址：
 
 https://remix.ethereum.org/#appVersion=0.7.7&optimize=false&version=soljson-v0.5.1+commit.c8a2cb62.js
 
@@ -923,7 +923,7 @@ https://remix.ethereum.org/#appVersion=0.7.7&optimize=false&version=soljson-v0.5
 <br/>
 <div id = 'download3'> 
 <strong font-size:13px;>
-&nbsp&nbsp Photon Cloud官方網址：
+Photon Cloud官方網址：
 
 https://www.photonengine.com/zh-TW/photon
 
@@ -932,7 +932,7 @@ https://www.photonengine.com/zh-TW/photon
 <br/>
 <div id = 'download4'> 
 <strong font-size:13px;>
-&nbsp&nbsp NodeJS的下載網址：
+NodeJS的下載網址：
 
 https://nodejs.org/download/release/v8.12.0/
 
