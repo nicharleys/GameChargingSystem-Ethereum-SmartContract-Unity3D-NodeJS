@@ -63,6 +63,9 @@
     </tr>
 </table>
 </div>
+
+[Geth安裝](#head1) 、 [Puppeth設定](#head2) 、 [私有鏈節點啟動](#head3)
+
 <div>    
 <table border="1">
     <tr>
@@ -75,60 +78,60 @@
     </tr>
 </table>
 </div>
+
+[發佈智能合約](#head4)
+
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
             <b>3.</b><br>
-            <strong font-size:13px;>更換NodeJS的連線網址。</strong>
-           </div>
-        </td>
-    </tr>
-</table>
-</div>
-<div>    
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>4.</b><br>
             <strong font-size:13px;>更換Dapp內的智能合約內容。</strong>
            </div>
         </td>
     </tr>
 </table>
 </div> 
+
+[更換Dapp設置](#head5)
+
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
-            <b>5.</b><br>
+            <b>4.</b><br>
             <strong font-size:13px;>設置Photon Cloud伺服器。</strong>
            </div>
         </td>
     </tr>
 </table>
 </div> 
+
+[Photon Cloud設定](#head6)
+
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
-            <b>6.</b><br>
+            <b>5.</b><br>
             <strong font-size:13px;>安裝並啟動NodeJS。</strong>
            </div>
         </td>
     </tr>
 </table>
 </div> 
+
+[NodeJS安裝](#head7) 、 [NodeJS插件安裝](#head8)
+
 <div>    
 <table border="1">
     <tr>
         <td>
             <div>
-            <b>7.</b><br>
+            <b>6.</b><br>
             <strong font-size:13px;>啟動Unity3D遊戲。</strong>
            </div>
         </td>
@@ -141,7 +144,7 @@
 
 # III、環境建置
 
-<div>
+<div id = 'head1'>
    <h3 styles={font-weight:bold;}>(1) Geth安裝</<h3> 
 </div>
 <table border="1">
@@ -154,6 +157,9 @@
         </td>
     </tr>
 </table>
+
+[Go Ethereum下載網址](#download1)
+
 <table border="1">
     <tr>
         <td>
@@ -188,7 +194,7 @@
 <br>
 <br>
 
-<div>
+<div  id = 'head2'>
    <h3 styles={font-weight:bold;}>(2) Puppeth設定</<h3> 
 </div>
 <table border="1">
@@ -315,7 +321,7 @@
 <br>
 
 
-<div>
+<div id = 'head3'>
    <h3 styles={font-weight:bold;}>(3) 私有鏈節點啟動</<h3> 
 </div>
 <table border="1">
@@ -370,11 +376,14 @@
         </td>
     </tr>
 </table>
+
+[Geth啟動指令](#code1)
+
 <br>
 <br>
 
 
-<div>
+<div id = 'head4'>
    <h3 styles={font-weight:bold;}>(4) 發佈智能合約</<h3> 
 </div>
 <table border="1">
@@ -397,6 +406,9 @@
         </td>
     </tr>
 </table>
+
+[Remix Solidity舊網址](#download2)
+
 <table border="1">
     <tr>
         <td>
@@ -561,8 +573,8 @@
 <br>
 <br>
 
-<div>
-   <h3 styles={font-weight:bold;}>(5) 更換Dapp合約內容</<h3> 
+<div id = 'head5'>
+   <h3 styles={font-weight:bold;}>(5) 更換Dapp設置</<h3> 
 </div>
 <table border="1">
     <tr>
@@ -638,7 +650,7 @@
 <br>
 <br>
 
-<div>
+<div id = 'head6'>
    <h3 styles={font-weight:bold;}>(6) Photon Cloud設定</<h3> 
 </div>
 <table border="1">
@@ -651,6 +663,9 @@
         </td>
     </tr>
 </table>
+
+[Photon Cloud官方網址](#download3)
+
 <table border="1">
     <tr>
         <td>
@@ -744,7 +759,7 @@
 <br>
 <br>
 
-<div>
+<div  id = 'head7'>
    <h3 styles={font-weight:bold;}>(7) NodeJS安裝</<h3> 
 </div>
 <table border="1">
@@ -757,6 +772,9 @@
         </td>
     </tr>
 </table>
+
+[NodeJS下載網址](#download4)
+
 <table border="1">
     <tr>
         <td>
@@ -771,8 +789,8 @@
 <br>
 <br>
 
-<div>
-   <h3 styles={font-weight:bold;}>(8) NodeJS 插件安裝</<h3> 
+<div id = 'head8'>
+   <h3 styles={font-weight:bold;}>(8) NodeJS插件安裝</<h3> 
 </div>
 <table border="1">
     <tr>
@@ -846,6 +864,9 @@
         </td>
     </tr>
 </table>
+
+[NodeJS啟動指令](#code2)
+
 <table border="1">
     <tr>
         <td>
@@ -882,31 +903,39 @@
 </strong>
 </div>
 <br/>
-<div> 
+<div id = 'download1'> 
 <strong font-size:13px;>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGo Ethereum的下載網址： <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://geth.ethereum.org/downloads/
 </strong>
 </div>
 <br/>
-<div> 
-<strong font-size:13px;>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNodeJS的下載網址：<br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://nodejs.org/download/release/v8.12.0/
-</strong>
-</div>
-<br/>
-<div> 
+<div id = 'download2'> 
 <strong font-size:13px;>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRemix Solidity的舊網址：<br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://remix.ethereum.org/#appVersion=0.7.7&optimize=false&version=soljson-v0.5.1+commit.c8a2cb62.js
 </strong>
 </div>
 <br/>
+<div id = 'download3'> 
+<strong font-size:13px;>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhoton Cloud官方網址：<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://www.photonengine.com/zh-TW/photon
+</strong>
+</div>
+<br/>
+<div id = 'download4'> 
+<strong font-size:13px;>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNodeJS的下載網址：<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphttps://nodejs.org/download/release/v8.12.0/
+</strong>
+</div>
+<br/>
+
 <br/>
 
 
-<div>
+<div id = 'code1'>
    <h3 styles={font-weight:bold;}>(1) Geth指令</<h3> 
 </div>
 
@@ -974,7 +1003,7 @@
 <br>
 <br>
 
-<div>
+<div id = 'code2'>
    <h3 styles={font-weight:bold;}>(3) NodeJS指令</<h3> 
 </div>
 
