@@ -562,7 +562,7 @@
 <br>
 
 <div>
-   <h3 styles={font-weight:bold;}>(5)更換Dapp合約內容</<h3> 
+   <h3 styles={font-weight:bold;}>(5) 更換Dapp合約內容</<h3> 
 </div>
 <table border="1">
     <tr>
@@ -610,7 +610,7 @@
         <td>
             <div>
             <b> 5.</b><br>
-            <b>將智能合約ABI覆蓋至ABI:[]內。</b>
+            <b>將智能合約ABI覆蓋至ABI:[ ]內。</b>
            </div>
         </td>
     </tr>
@@ -620,7 +620,7 @@
         <td>
             <div>
             <b> 6.</b><br>
-            <b>將智能合約地址覆蓋至底部的address:””內。</b>
+            <b>將智能合約地址覆蓋至底部的address:” ”內。</b>
            </div>
         </td>
     </tr>
@@ -772,7 +772,7 @@
 <br>
 
 <div>
-   <h3 styles={font-weight:bold;}>(8) Photon Cloud設定</<h3> 
+   <h3 styles={font-weight:bold;}>(8) NodeJS 插件安裝</<h3> 
 </div>
 <table border="1">
     <tr>
