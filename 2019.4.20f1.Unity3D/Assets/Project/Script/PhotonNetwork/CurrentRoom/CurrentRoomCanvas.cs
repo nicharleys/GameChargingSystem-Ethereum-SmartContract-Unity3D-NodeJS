@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 public class CurrentRoomCanvas : MonoBehaviour {
 
     public void OnClickStartSync() {

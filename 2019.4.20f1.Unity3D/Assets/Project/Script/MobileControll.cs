@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhoneControll : MonoBehaviour {
+public class MobileControll : MonoBehaviour {
     public string keyboard { get; private set; }
-    public static PhoneControll Instance;
+    public static MobileControll Instance;
 
     void Awake() {
         Instance = this;

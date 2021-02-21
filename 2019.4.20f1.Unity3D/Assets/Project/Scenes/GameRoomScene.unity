@@ -1056,6 +1056,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: LotteryBackNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &124378846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,7 +1256,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
+        m_MethodName: StartBuyLottery
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1303,12 +1314,12 @@ GameObject:
   - component: {fileID: 141533852}
   - component: {fileID: 141533851}
   m_Layer: 5
-  m_Name: PhoneControll
+  m_Name: MobileControll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &141533851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,6 +1705,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: UseCredit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &217748249
 GameObject:
@@ -1813,6 +1835,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1541475054}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterStop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2313,6 +2346,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: ItemTransaction_showPutItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &292688220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2648,18 +2692,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
+        m_MethodName: StartLookLottery
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3006,7 +3039,7 @@ GameObject:
   - component: {fileID: 362973978}
   - component: {fileID: 362973977}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ChangeAddress_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3297,6 +3330,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: GiveCredit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397853712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,7 +3468,7 @@ GameObject:
   - component: {fileID: 428628709}
   - component: {fileID: 428628708}
   m_Layer: 5
-  m_Name: OtherUserNameShow_Text
+  m_Name: OtherUserName_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3442,7 +3486,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1789898813}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30529264, y: 0}
   m_AnchorMax: {x: 0.98170745, y: 1}
@@ -3481,7 +3525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0x6E427fe90d42ba92f1f426c07d362113926eb3d1
+  m_Text: 
 --- !u!222 &428628709
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4844,7 +4888,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1305339709}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37369576, y: 0}
   m_AnchorMax: {x: 0.6263893, y: 0.2531226}
@@ -4896,6 +4940,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1541475054}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5093,6 +5148,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: MoneyTransaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &682092014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5234,6 +5300,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: ItemTransactionBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6000,6 +6077,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: GiveCreditBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &769192268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6141,6 +6229,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: MoneyTransactionBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6379,7 +6478,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
+        m_MethodName: StartTwoPointDeal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6769,6 +6868,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2061684285}
+        m_MethodName: StartExchangeStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &862076716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7066,6 +7176,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: LotteryTransaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7563,6 +7684,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: ItemTransaction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8180,6 +8312,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2061684285}
+        m_MethodName: StartCancelExchange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1047824592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8378,6 +8521,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1541475054}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterQ
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8845,6 +8999,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: LotteryTransactionBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1151242185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8933,6 +9098,7 @@ GameObject:
   - component: {fileID: 1160881405}
   - component: {fileID: 1160881404}
   - component: {fileID: 1160881403}
+  - component: {fileID: 1160881407}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9023,6 +9189,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1160881407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160881402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc26ae3550a4d24b972aba78495e004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockChainFunction: {fileID: 2061684285}
+  mainUI_GameObject:
+  - {fileID: 1788551615}
+  - {fileID: 1897288035}
+  transactionUI_GameObject:
+  - {fileID: 1504169077}
+  - {fileID: 2010655310}
+  - {fileID: 248054296}
+  - {fileID: 1674891079}
+  itemTransactionUI_GameObject:
+  - {fileID: 2071044940}
+  - {fileID: 576679981}
+  lotteryStatusUI_GameObject: {fileID: 1774019567}
+  otherUserAddress_GameObject: {fileID: 0}
+  giveCreditInput_Gameobject:
+  - {fileID: 2187910372745763776}
+  - {fileID: 2095320899}
+  - {fileID: 1118947377}
+  - {fileID: 362973975}
+  moneyTransactionInput_GameObject:
+  - {fileID: 198962529}
+  - {fileID: 135409876}
+  - {fileID: 754209144}
+  lotteryBuyValue_InputField: {fileID: 3590335141666340308}
+  PhoneContoll_GameObject: {fileID: 1305339708}
 --- !u!1 &1168716958
 GameObject:
   m_ObjectHideFlags: 0
@@ -9367,7 +9570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.051832385, y: 0}
   m_AnchorMax: {x: 1, y: 0.7103835}
-  m_AnchoredPosition: {x: -5.120178, y: -0.000015258789}
+  m_AnchoredPosition: {x: -5.1201706, y: -0.000015258789}
   m_SizeDelta: {x: 10.240234, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1208738591
@@ -9553,7 +9756,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1305339709}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.74749154, y: 0.36487743}
   m_AnchorMax: {x: 1, y: 0.62924516}
@@ -9605,6 +9808,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1541475054}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9949,10 +10163,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8888889, y: 0.8888889, z: 0.8888889}
   m_Children:
-  - {fileID: 640307721}
-  - {fileID: 1240612816}
-  - {fileID: 1733008913}
   - {fileID: 1888792276}
+  - {fileID: 640307721}
+  - {fileID: 1733008913}
+  - {fileID: 1240612816}
   - {fileID: 218056533}
   - {fileID: 1051532427}
   - {fileID: 1953777994}
@@ -10078,7 +10292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.051832385, y: 0.73019177}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.120453, y: 0}
+  m_AnchoredPosition: {x: -5.1204453, y: 0}
   m_SizeDelta: {x: 10.240173, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1328397661
@@ -10372,18 +10586,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
+        m_MethodName: StartGiveApprove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11117,7 +11320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.051832385, y: 0.73019177}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.120178, y: -0.000030517578}
+  m_AnchoredPosition: {x: -5.1201706, y: -0.000030517578}
   m_SizeDelta: {x: 10.240234, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1534304681
@@ -11837,6 +12040,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1733008915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12093,17 +12307,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12432,8 +12635,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6104352559715292356}
-  - {fileID: 428628707}
   - {fileID: 1687063445800182813}
+  - {fileID: 428628707}
   m_Father: {fileID: 1788551616}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12853,6 +13056,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: LotteryNextNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847782342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13192,7 +13406,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1305339709}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.37369576, y: 0.75261295}
   m_AnchorMax: {x: 0.6263893, y: 1}
@@ -13244,6 +13458,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1541475054}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterW
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13756,6 +13981,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 141533851}
+        m_MethodName: EnterE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1953777996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13944,7 +14180,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2061684285}
-        m_MethodName: ChangeAddressPosition
+        m_MethodName: StartPutExchange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14200,7 +14436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2061684285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15236,6 +15472,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: CloseUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1687063445799870259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15256,7 +15503,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1789898813}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.018292617, y: 0}
   m_AnchorMax: {x: 0.30529264, y: 1}
@@ -15275,7 +15522,7 @@ GameObject:
   - component: {fileID: 1687063445799870259}
   - component: {fileID: 1687063445818532709}
   m_Layer: 5
-  m_Name: OtherUserName_Text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15543,6 +15790,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: ChangeAddressPosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17595,6 +17853,28 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274431930788}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: ItemTransaction_showBothItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061684285}
+        m_MethodName: StartLookExchange_Other
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

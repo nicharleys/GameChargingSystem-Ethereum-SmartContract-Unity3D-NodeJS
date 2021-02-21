@@ -81,7 +81,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
 
     }
     private void StartMove_M() {
-        if (PhoneControll.Instance.keyboard == "W") {
+        if (MobileControll.Instance.keyboard == "W") {
             if (moveSpeed < 7) {
                 moveSpeed += 0.5f;
             }
@@ -91,7 +91,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
             ControllWalkOrRun();
         }
-        else if (PhoneControll.Instance.keyboard == "S") {
+        else if (MobileControll.Instance.keyboard == "S") {
             if (moveSpeed < 7) {
                 moveSpeed += 0.5f;
             }
@@ -101,7 +101,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             this.transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
             ControllWalkOrRun();
         }
-        else if (PhoneControll.Instance.keyboard == "A") {
+        else if (MobileControll.Instance.keyboard == "A") {
             if (turnSpeed < 70) {
                 turnSpeed += 0.5f;
             }
@@ -109,7 +109,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             this.transform.Rotate(Vector3.up, Time.deltaTime * -turnSpeed);
             ControllWalkOrRun();
         }
-        else if (PhoneControll.Instance.keyboard == "D") {
+        else if (MobileControll.Instance.keyboard == "D") {
             if (turnSpeed < 70) {
                 turnSpeed += 0.5f;
             }
@@ -117,7 +117,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             this.transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed);
             ControllWalkOrRun();
         }
-        else if (PhoneControll.Instance.keyboard == "Q") {
+        else if (MobileControll.Instance.keyboard == "Q") {
             if (moveSpeed < 7) {
                 moveSpeed += 0.5f;
             }
@@ -133,7 +133,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             this.transform.Rotate(Vector3.up, Time.deltaTime * -turnSpeed);
             ControllWalkOrRun();
         }
-        else if (PhoneControll.Instance.keyboard == "E") {
+        else if (MobileControll.Instance.keyboard == "E") {
             if (moveSpeed < 7) {
                 moveSpeed += 0.5f;
             }
@@ -149,7 +149,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             this.transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed);
             ControllWalkOrRun();
         }
-        else if (PhoneControll.Instance.keyboard == "P") {
+        else if (MobileControll.Instance.keyboard == "P") {
             reduceMoveStateW = true;
             reduceMoveStateS = true;
             reduceMoveStateA = true;

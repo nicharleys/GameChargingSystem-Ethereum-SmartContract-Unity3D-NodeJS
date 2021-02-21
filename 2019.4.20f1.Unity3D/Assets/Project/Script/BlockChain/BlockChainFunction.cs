@@ -734,7 +734,7 @@ public class BlockChainFunction : MonoBehaviour {
         timeStart = true;//全部執行一次後，在持續更新
     }
     public void UpdateData() {
-        switch (ControllGameUI.Instance.UIStatus) {
+        switch (ControllGameUI.Instance.uiStatus_string) {
             case "MoneyTransaction":
                 CheckBalanceOf();
                 break;
