@@ -14450,35 +14450,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllGameUI: {fileID: 0}
-  giveCredit_sendamount: {fileID: 0}
-  moneyTransaction_sendamount: {fileID: 0}
-  showname: {fileID: 0}
-  showowner: {fileID: 0}
-  showUserMoney_GiveCredit: {fileID: 0}
-  showUserMoney_MoneyTransaction: {fileID: 0}
-  showUserMoney_ItemTransaction: {fileID: 0}
-  showUserMoney_LotteryTransaction: {fileID: 0}
-  showUserAllowance_GiveCredit: {fileID: 0}
-  ShowOtherItem1: {fileID: 0}
-  ShowOtherItem2: {fileID: 0}
-  ShowOtherBalance: {fileID: 0}
-  ShowOtherStatus: {fileID: 0}
-  ShowSelfItem1: {fileID: 0}
-  ShowSelfItem2: {fileID: 0}
-  ShowSelfBalance: {fileID: 0}
-  ShowSelfStatus: {fileID: 0}
-  moneyTransaction_Toggle: {fileID: 0}
-  moneyTransaction_AddressValue: {fileID: 0}
-  GiveCredit_Toggle: {fileID: 0}
-  changeAddressPosition_Value: {fileID: 0}
+  uiValue_text:
+  - {fileID: 965557671}
+  - {fileID: 1000237042}
+  - {fileID: 485832759}
+  - {fileID: 168938742}
+  - {fileID: 1426311976}
+  - {fileID: 16048037}
+  - {fileID: 785072805}
+  - {fileID: 174629777}
+  - {fileID: 736076431}
+  - {fileID: 746785881}
+  - {fileID: 1024291507}
+  - {fileID: 1006196518}
+  - {fileID: 830779255}
+  - {fileID: 864500891}
+  - {fileID: 469437365}
+  - {fileID: 292160906}
+  - {fileID: 2135902696}
+  - {fileID: 620419089}
   changeAddressPosition_Text: {fileID: 0}
   nowClickAddress: {fileID: 0}
+  giveCreditBack_button: {fileID: 0}
+  giveCreditChange_button: {fileID: 0}
+  giveCreditEnter_button: {fileID: 0}
+  moneyTransactionBack_button: {fileID: 0}
+  moneyTransactionEnter_button: {fileID: 0}
+  ItemTransactionBack_button: {fileID: 0}
+  ItemTransactionGive_button: {fileID: 0}
+  ItemTransactionChangeStatus_button: {fileID: 0}
+  ItemTransactionCancel_button: {fileID: 0}
+  ItemTransactionEnter_button: {fileID: 0}
+  lotteryTransactionBack_button: {fileID: 0}
+  lotteryTransactionLook_button: {fileID: 0}
+  lotteryTransactionBuy_button: {fileID: 0}
+  lotteryTransactionLookNext_button: {fileID: 0}
+  lotteryTransactionLookBack_button: {fileID: 0}
+  giveCreditValue_InputField: {fileID: 0}
+  giveCreditChange_InputField: {fileID: 0}
+  moneyTransactionVale_InputField: {fileID: 0}
+  moneyTransactionCredit_InputField: {fileID: 0}
   itemTransactionBalances_Value: {fileID: 0}
   itemTransactionItem1_Value: {fileID: 0}
   itemTransactionItem2_Value: {fileID: 0}
-  lottery_Owner: {fileID: 0}
-  lottery_Money: {fileID: 0}
-  lottery_Player: {fileID: 0}
+  lotteryTransaction_Value: {fileID: 0}
+  lotteryTransactionLookValue_InputField: {fileID: 0}
+  giveCreditChange_Toggle: {fileID: 0}
+  moneyTransactionCredit_Toggle: {fileID: 0}
   contractStatus:
     callnumber: 
     getnamereturn: 
@@ -14532,34 +14550,6 @@ MonoBehaviour:
   buyLottery:
     callnumber: 
     value: 
-  transformStatus: finished
-  listenStatus: finished
-  waitProcess: 
-  giveCreditBack_button: {fileID: 0}
-  giveCreditChange_Toggle: {fileID: 0}
-  giveCreditChange_button: {fileID: 0}
-  giveCreditValue_InputField: {fileID: 0}
-  giveCreditEnter_button: {fileID: 0}
-  giveCreditChange_InputField: {fileID: 0}
-  moneyTransactionBack_button: {fileID: 0}
-  moneyTransactionCredit_Toggle: {fileID: 0}
-  moneyTransactionVale_InputField: {fileID: 0}
-  moneyTransactionEnter_button: {fileID: 0}
-  moneyTransactionCredit_InputField: {fileID: 0}
-  ItemTransactionBack_button: {fileID: 0}
-  ItemTransactionGive_button: {fileID: 0}
-  ItemTransactionChangeStatus_button: {fileID: 0}
-  ItemTransactionCancel_button: {fileID: 0}
-  ItemTransactionEnter_button: {fileID: 0}
-  lotteryTransaction_Value: {fileID: 0}
-  lotteryTransactionBack_button: {fileID: 0}
-  lotteryTransactionLook_button: {fileID: 0}
-  lotteryTransactionBuy_button: {fileID: 0}
-  lotteryTransactionLookNext_button: {fileID: 0}
-  lotteryTransactionLookBack_button: {fileID: 0}
-  lotteryTransactionLookValue_InputField: {fileID: 0}
-  playernumber: 0
-  waitMessage: 1
 --- !u!224 &2061684286
 RectTransform:
   m_ObjectHideFlags: 0
