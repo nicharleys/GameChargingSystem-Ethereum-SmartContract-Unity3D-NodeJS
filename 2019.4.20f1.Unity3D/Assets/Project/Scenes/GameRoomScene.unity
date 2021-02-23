@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 2431587}
   - component: {fileID: 2431586}
   m_Layer: 5
-  m_Name: SelectLotteryNumber_InputField
+  m_Name: LotteryTransactionLookValue_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,9 +303,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1183086536}
-  - {fileID: 1642604265}
   - {fileID: 1922133099}
   - {fileID: 1650450204}
+  - {fileID: 1642604265}
   - {fileID: 307478694}
   m_Father: {fileID: 2071044941}
   m_RootOrder: 1
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 16048038}
   - component: {fileID: 16048037}
   m_Layer: 5
-  m_Name: UserMoney_Text
+  m_Name: LotteryTransactionUserMoney_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 113119242}
   - component: {fileID: 113119241}
   m_Layer: 5
-  m_Name: Item1_InputField
+  m_Name: itemTransactionItem1_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,11 +737,11 @@ RectTransform:
   - {fileID: 746504133}
   - {fileID: 217748250}
   m_Father: {fileID: 391807222}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.33900002}
   m_AnchorMax: {x: 1, y: 0.669}
-  m_AnchoredPosition: {x: -0.000076293945, y: -0.019830704}
+  m_AnchoredPosition: {x: -0.000076293945, y: -0.019828796}
   m_SizeDelta: {x: 0, y: -0.49951172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &113119241
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 124378846}
   - component: {fileID: 124378845}
   m_Layer: 5
-  m_Name: SelectUp_Button
+  m_Name: LotteryTransactionLookBack_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 139900286}
   - component: {fileID: 139900285}
   m_Layer: 5
-  m_Name: Enter_Button
+  m_Name: LotteryTransactionBuy_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,12 +1343,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.84, y: 0.84, z: 0.84}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 761855001}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 249.4, y: 158.66661}
+  m_AnchoredPosition: {x: -535.6543, y: -45.50351}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &168938740
@@ -1363,7 +1363,7 @@ GameObject:
   - component: {fileID: 168938743}
   - component: {fileID: 168938742}
   m_Layer: 5
-  m_Name: UserMoney_Text
+  m_Name: MoneyTransactionUserMoney_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 174629778}
   - component: {fileID: 174629777}
   m_Layer: 5
-  m_Name: Item1Value_Text
+  m_Name: OtherItem1Value_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1602,7 +1602,7 @@ GameObject:
   - component: {fileID: 198962532}
   - component: {fileID: 198962531}
   m_Layer: 5
-  m_Name: UseCredit_Toggle
+  m_Name: MoneyTransactionCredit_Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2592,7 +2592,7 @@ GameObject:
   - component: {fileID: 302475195}
   - component: {fileID: 302475194}
   m_Layer: 5
-  m_Name: SearchPlayers_Button
+  m_Name: LotteryTransactionLook_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2868,7 +2868,7 @@ GameObject:
   - component: {fileID: 361676713}
   - component: {fileID: 361676712}
   m_Layer: 5
-  m_Name: GiveMoney_InputField
+  m_Name: MoneyTransactionValue_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3039,7 +3039,7 @@ GameObject:
   - component: {fileID: 362973978}
   - component: {fileID: 362973977}
   m_Layer: 5
-  m_Name: ChangeAddress_Text
+  m_Name: ChangeAddressPosition_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3206,8 +3206,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 113119240}
   - {fileID: 6030002560734906361}
+  - {fileID: 113119240}
   - {fileID: 571004819}
   m_Father: {fileID: 576679982}
   m_RootOrder: 1
@@ -3468,7 +3468,7 @@ GameObject:
   - component: {fileID: 428628709}
   - component: {fileID: 428628708}
   m_Layer: 5
-  m_Name: OtherUserName_Text
+  m_Name: NowClickAddress_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3585,7 +3585,7 @@ GameObject:
   - component: {fileID: 469437366}
   - component: {fileID: 469437365}
   m_Layer: 5
-  m_Name: StatusValue_Text
+  m_Name: SelfStatusValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,7 +3757,7 @@ Transform:
   - {fileID: 2086478864}
   - {fileID: 296019304}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485832757
 GameObject:
@@ -3771,7 +3771,7 @@ GameObject:
   - component: {fileID: 485832760}
   - component: {fileID: 485832759}
   m_Layer: 5
-  m_Name: UserMoney_Text
+  m_Name: GiveCreditUserMoney_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3851,7 +3851,7 @@ GameObject:
   - component: {fileID: 492881714}
   - component: {fileID: 492881713}
   m_Layer: 5
-  m_Name: Enter_Button
+  m_Name: ItemTransactionEnter_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4191,7 +4191,7 @@ GameObject:
   - component: {fileID: 557139108}
   - component: {fileID: 557139107}
   m_Layer: 5
-  m_Name: UserMoney
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4349,7 +4349,7 @@ GameObject:
   - component: {fileID: 571004821}
   - component: {fileID: 571004820}
   m_Layer: 5
-  m_Name: Item2_InputField
+  m_Name: itemTransactionItem2_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5210,7 +5210,7 @@ GameObject:
   - component: {fileID: 710409186}
   - component: {fileID: 710409185}
   m_Layer: 5
-  m_Name: Back_Button
+  m_Name: ItemTransactionBack_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5406,7 +5406,7 @@ GameObject:
   - component: {fileID: 736076432}
   - component: {fileID: 736076431}
   m_Layer: 5
-  m_Name: Item2Value_Text
+  m_Name: OtherItem2Value_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5562,7 +5562,7 @@ GameObject:
   - component: {fileID: 746785882}
   - component: {fileID: 746785881}
   m_Layer: 5
-  m_Name: CoinValue_Text
+  m_Name: OtherMoneyValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5641,7 +5641,7 @@ GameObject:
   - component: {fileID: 754209147}
   - component: {fileID: 754209146}
   m_Layer: 5
-  m_Name: OtherUserName_InputField
+  m_Name: MoneyTransactionCredit_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5854,6 +5854,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760629279}
   m_CullTransparentMesh: 0
+--- !u!1 &761855000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761855001}
+  m_Layer: 0
+  m_Name: UIControll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761855001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761855000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 785.0543, y: 204.17014, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2061684286}
+  - {fileID: 141533852}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763113674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,7 +6010,7 @@ GameObject:
   - component: {fileID: 769192267}
   - component: {fileID: 769192266}
   m_Layer: 5
-  m_Name: Back_Button
+  m_Name: GiveCreditBack_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6139,7 +6171,7 @@ GameObject:
   - component: {fileID: 774476136}
   - component: {fileID: 774476135}
   m_Layer: 5
-  m_Name: Back_Button
+  m_Name: MoneyTransactionBack_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6378,7 +6410,7 @@ GameObject:
   - component: {fileID: 814425959}
   - component: {fileID: 814425958}
   m_Layer: 5
-  m_Name: Enter_Button
+  m_Name: MoneyTransactionEnter_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6611,7 +6643,7 @@ GameObject:
   - component: {fileID: 830779256}
   - component: {fileID: 830779255}
   m_Layer: 5
-  m_Name: Item2Value_Text
+  m_Name: SelfItem2Value_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6769,7 +6801,7 @@ GameObject:
   - component: {fileID: 862076715}
   - component: {fileID: 862076714}
   m_Layer: 5
-  m_Name: ChangeStatus_Button
+  m_Name: ItemTransactionChangeStatus_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6928,7 +6960,7 @@ GameObject:
   - component: {fileID: 864500892}
   - component: {fileID: 864500891}
   m_Layer: 5
-  m_Name: CoinValue_Text
+  m_Name: SelfMoneyValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7905,7 +7937,7 @@ GameObject:
   - component: {fileID: 1006196519}
   - component: {fileID: 1006196518}
   m_Layer: 5
-  m_Name: Item1Value_Text
+  m_Name: SelfItem1Value_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8001,7 +8033,7 @@ RectTransform:
   - {fileID: 235850956}
   - {fileID: 736076430}
   m_Father: {fileID: 1195205197}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0355461, y: 0.22655384}
   m_AnchorMax: {x: 0.96445394, y: 0.4088943}
@@ -8055,7 +8087,7 @@ GameObject:
   - component: {fileID: 1024291508}
   - component: {fileID: 1024291507}
   m_Layer: 5
-  m_Name: StatusValue_Text
+  m_Name: OtherStatusValue_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8213,7 +8245,7 @@ GameObject:
   - component: {fileID: 1047824591}
   - component: {fileID: 1047824590}
   m_Layer: 5
-  m_Name: CancelItem_Button
+  m_Name: ItemTransactionCancel_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8747,7 +8779,7 @@ GameObject:
   - component: {fileID: 1118947380}
   - component: {fileID: 1118947379}
   m_Layer: 5
-  m_Name: OtherUserName_InputField
+  m_Name: GiveCreditChange_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8900,7 +8932,7 @@ GameObject:
   - component: {fileID: 1151242184}
   - component: {fileID: 1151242183}
   m_Layer: 5
-  m_Name: Back_Button
+  m_Name: LotteryTransactionBack_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9182,7 +9214,7 @@ RectTransform:
   - {fileID: 1305339709}
   - {fileID: 1788551616}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9201,7 +9233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc26ae3550a4d24b972aba78495e004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockChainFunction: {fileID: 2061684285}
   mainUI_GameObject:
   - {fileID: 1788551615}
   - {fileID: 1897288035}
@@ -9210,11 +9241,7 @@ MonoBehaviour:
   - {fileID: 2010655310}
   - {fileID: 248054296}
   - {fileID: 1674891079}
-  itemTransactionUI_GameObject:
-  - {fileID: 2071044940}
-  - {fileID: 576679981}
-  lotteryStatusUI_GameObject: {fileID: 1774019567}
-  otherUserAddress_GameObject: {fileID: 0}
+  otherUserAddress_GameObject: {fileID: 428628706}
   giveCreditInput_Gameobject:
   - {fileID: 2187910372745763776}
   - {fileID: 2095320899}
@@ -9224,7 +9251,11 @@ MonoBehaviour:
   - {fileID: 198962529}
   - {fileID: 135409876}
   - {fileID: 754209144}
+  itemTransactionUI_GameObject:
+  - {fileID: 2071044940}
+  - {fileID: 576679981}
   lotteryBuyValue_InputField: {fileID: 3590335141666340308}
+  lotteryStatusUI_GameObject: {fileID: 1774019567}
   PhoneContoll_GameObject: {fileID: 1305339708}
 --- !u!1 &1168716958
 GameObject:
@@ -9486,9 +9517,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1494947443}
-  - {fileID: 1984748614}
   - {fileID: 1272194253}
   - {fileID: 1018326167}
+  - {fileID: 1984748614}
   - {fileID: 2121691293}
   m_Father: {fileID: 2071044941}
   m_RootOrder: 0
@@ -9570,7 +9601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.051832385, y: 0}
   m_AnchorMax: {x: 1, y: 0.7103835}
-  m_AnchoredPosition: {x: -5.1201706, y: -0.000015258789}
+  m_AnchoredPosition: {x: -5.120163, y: -0.000030517578}
   m_SizeDelta: {x: 10.240234, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1208738591
@@ -10051,7 +10082,7 @@ RectTransform:
   - {fileID: 875249719}
   - {fileID: 174629776}
   m_Father: {fileID: 1195205197}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0355461, y: 0.4088943}
   m_AnchorMax: {x: 0.96445394, y: 0.588}
@@ -10292,7 +10323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.051832385, y: 0.73019177}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.1204453, y: 0}
+  m_AnchoredPosition: {x: -5.1204376, y: 0}
   m_SizeDelta: {x: 10.240173, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1328397661
@@ -10486,7 +10517,7 @@ GameObject:
   - component: {fileID: 1418102703}
   - component: {fileID: 1418102702}
   m_Layer: 5
-  m_Name: Enter_Button
+  m_Name: GiveCreditEnter_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10719,7 +10750,7 @@ GameObject:
   - component: {fileID: 1426311977}
   - component: {fileID: 1426311976}
   m_Layer: 5
-  m_Name: UserMoney_Text
+  m_Name: ItemTransactionUserMoney_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11320,7 +11351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.051832385, y: 0.73019177}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.1201706, y: -0.000030517578}
+  m_AnchoredPosition: {x: -5.120163, y: -0.000030517578}
   m_SizeDelta: {x: 10.240234, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1534304681
@@ -11867,7 +11898,7 @@ RectTransform:
   - {fileID: 1274526495}
   - {fileID: 864500890}
   m_Father: {fileID: 8106217}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0355461, y: 0.588}
   m_AnchorMax: {x: 0.96445394, y: 0.7828934}
@@ -11904,7 +11935,7 @@ RectTransform:
   - {fileID: 1534304682}
   - {fileID: 830779254}
   m_Father: {fileID: 8106217}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0355461, y: 0.22655384}
   m_AnchorMax: {x: 0.96445394, y: 0.4088943}
@@ -11945,7 +11976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.77300006, y: 0.20133257}
   m_AnchorMax: {x: 0.99700004, y: 0.8093326}
-  m_AnchoredPosition: {x: 0.00012207031, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1733008912
@@ -12217,7 +12248,7 @@ GameObject:
   - component: {fileID: 1769863873}
   - component: {fileID: 1769863872}
   m_Layer: 5
-  m_Name: ChangeAddress_Button
+  m_Name: GiveCreditChange_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12966,7 +12997,7 @@ GameObject:
   - component: {fileID: 1847782342}
   - component: {fileID: 1847782341}
   m_Layer: 5
-  m_Name: SelectDown_Button
+  m_Name: LotteryTransactionLookNext_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13734,7 +13765,7 @@ RectTransform:
   - {fileID: 1886143780}
   - {fileID: 1006196517}
   m_Father: {fileID: 8106217}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0355461, y: 0.4088943}
   m_AnchorMax: {x: 0.96445394, y: 0.588}
@@ -14059,7 +14090,7 @@ RectTransform:
   - {fileID: 1045733729}
   - {fileID: 746785880}
   m_Father: {fileID: 1195205197}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0355461, y: 0.588}
   m_AnchorMax: {x: 0.96445394, y: 0.7828934}
@@ -14080,7 +14111,7 @@ GameObject:
   - component: {fileID: 2003066218}
   - component: {fileID: 2003066217}
   m_Layer: 5
-  m_Name: Enter_Button
+  m_Name: ItemTransactionGive_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14430,6 +14461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2061684286}
   - component: {fileID: 2061684285}
+  - component: {fileID: 2061684287}
   m_Layer: 5
   m_Name: BlockChainControll
   m_TagString: Untagged
@@ -14449,8 +14481,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5aa11ed5cb92c64599c62d267f61881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllGameUI: {fileID: 0}
-  uiValue_text:
+--- !u!224 &2061684286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061684284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0239999, y: 1.0239999, z: 1.0239999}
+  m_Children: []
+  m_Father: {fileID: 761855001}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -273.05432, y: 179.82983}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2061684287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061684284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cdb6a3120df4942ae8b8ee24e43620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiValue_Text:
   - {fileID: 965557671}
   - {fileID: 1000237042}
   - {fileID: 485832759}
@@ -14469,106 +14531,38 @@ MonoBehaviour:
   - {fileID: 292160906}
   - {fileID: 2135902696}
   - {fileID: 620419089}
-  changeAddressPosition_Text: {fileID: 0}
-  nowClickAddress: {fileID: 0}
-  giveCreditBack_button: {fileID: 0}
-  giveCreditChange_button: {fileID: 0}
-  giveCreditEnter_button: {fileID: 0}
-  moneyTransactionBack_button: {fileID: 0}
-  moneyTransactionEnter_button: {fileID: 0}
-  ItemTransactionBack_button: {fileID: 0}
-  ItemTransactionGive_button: {fileID: 0}
-  ItemTransactionChangeStatus_button: {fileID: 0}
-  ItemTransactionCancel_button: {fileID: 0}
-  ItemTransactionEnter_button: {fileID: 0}
-  lotteryTransactionBack_button: {fileID: 0}
-  lotteryTransactionLook_button: {fileID: 0}
-  lotteryTransactionBuy_button: {fileID: 0}
-  lotteryTransactionLookNext_button: {fileID: 0}
-  lotteryTransactionLookBack_button: {fileID: 0}
-  giveCreditValue_InputField: {fileID: 0}
-  giveCreditChange_InputField: {fileID: 0}
-  moneyTransactionVale_InputField: {fileID: 0}
-  moneyTransactionCredit_InputField: {fileID: 0}
-  itemTransactionBalances_Value: {fileID: 0}
-  itemTransactionItem1_Value: {fileID: 0}
-  itemTransactionItem2_Value: {fileID: 0}
-  lotteryTransaction_Value: {fileID: 0}
-  lotteryTransactionLookValue_InputField: {fileID: 0}
-  giveCreditChange_Toggle: {fileID: 0}
-  moneyTransactionCredit_Toggle: {fileID: 0}
-  contractStatus:
-    callnumber: 
-    getnamereturn: 
-    getownerreturn: 
-  listenEvent_New:
-    callnumber: 
-    blockHash: 
-  listenEvent_Old:
-    blockHash: 
-  giveApprove:
-    callnumber: 
-    value: 
-  twoPointDeal:
-    callnumber: 
-    value: 
-  balanceOf:
-    callnumber: 
-    value: 
-  allowance:
-    callnumber: 
-    value: 
-  lookExchange_Self:
-    callnumber: 
-    balances: 
-    item1: 
-    item2: 
-    status: 
-  lookExchange_Other:
-    callnumber: 
-    balances: 
-    item1: 
-    item2: 
-    status: 
-  lookLottery:
-    callnumber: 
-    getlotteryOwnerreturn: 
-    getlookMoneyreturn: 
-    getlookPlayersreturn: 
-  putExchange:
-    callnumber: 
-    value: 
-  exchangeStatus:
-    callnumber: 
-    value: 
-  cancelExchange:
-    callnumber: 
-    value: 
-  exchangeItem:
-    callnumber: 
-    value: 
-  buyLottery:
-    callnumber: 
-    value: 
---- !u!224 &2061684286
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061684284}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0239999, y: 1.0239999, z: 1.0239999}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 511.99994, y: 384}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  giveCredit_GameObject:
+  - {fileID: 769192264}
+  - {fileID: 1769863870}
+  - {fileID: 1418102700}
+  - {fileID: 3566252677316381932}
+  - {fileID: 1118947377}
+  - {fileID: 2187910372745763776}
+  moneyTransaction_GameObject:
+  - {fileID: 774476133}
+  - {fileID: 814425956}
+  - {fileID: 361676710}
+  - {fileID: 754209144}
+  - {fileID: 198962529}
+  ItemTransaction_GameObject:
+  - {fileID: 710409183}
+  - {fileID: 2003066215}
+  - {fileID: 862076712}
+  - {fileID: 1047824588}
+  - {fileID: 492881711}
+  - {fileID: 6030002560714918555}
+  - {fileID: 113119239}
+  - {fileID: 571004818}
+  lotteryTransaction_GameObject:
+  - {fileID: 1151242181}
+  - {fileID: 302475192}
+  - {fileID: 139900283}
+  - {fileID: 1847782339}
+  - {fileID: 124378843}
+  - {fileID: 3590335141659254598}
+  lotteryTransactionLookValue_InputField: {fileID: 2431586}
+  nowClickAddress_Text: {fileID: 428628708}
+  changeAddressPosition_Text: {fileID: 362973977}
 --- !u!1 &2071044940
 GameObject:
   m_ObjectHideFlags: 0
@@ -15941,7 +15935,7 @@ GameObject:
   - component: {fileID: 2187910372735563386}
   - component: {fileID: 2187910372738419302}
   m_Layer: 5
-  m_Name: SearchOtherUser_Toggle
+  m_Name: GiveCreditChange_Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16215,7 +16209,7 @@ GameObject:
   - component: {fileID: 3566252677305642622}
   - component: {fileID: 3566252677306910260}
   m_Layer: 5
-  m_Name: GivenCredit_InputField
+  m_Name: GiveCreditValue_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16529,7 +16523,7 @@ GameObject:
   - component: {fileID: 3590335141666340308}
   - component: {fileID: 3590335141666559390}
   m_Layer: 5
-  m_Name: BuyLottery_InputField
+  m_Name: LotteryTransaction_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17277,7 +17271,7 @@ GameObject:
   - component: {fileID: 6030002560725149705}
   - component: {fileID: 6030002560722223171}
   m_Layer: 5
-  m_Name: Money_InputField
+  m_Name: itemTransactionBalances_InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17548,7 +17542,7 @@ RectTransform:
   - {fileID: 6030002560735058195}
   - {fileID: 6030002560734997839}
   m_Father: {fileID: 391807222}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.669}
   m_AnchorMax: {x: 1, y: 1}

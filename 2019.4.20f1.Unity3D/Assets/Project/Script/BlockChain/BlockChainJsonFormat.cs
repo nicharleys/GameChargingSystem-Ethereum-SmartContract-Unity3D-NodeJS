@@ -15,7 +15,6 @@ public class ListenEvent_New {
 public class ListenEvent_Old {
     public string blockHash;
 }
-
 [Serializable]
 public class BalanceOf {
     public string callnumber;

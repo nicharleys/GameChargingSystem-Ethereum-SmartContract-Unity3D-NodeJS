@@ -4,44 +4,37 @@ using UnityEngine.UI;
 public class ControllGameUI : MonoBehaviour {
 
     public static ControllGameUI Instance;
-    public BlockChainFunction blockChainFunction;
-    
+    UpdateUI updateUI;
     //0 : userUI, 1 : sideUI
     [SerializeField] private GameObject[] mainUI_GameObject;
-
     //0 : giveCreditUI, 1 : moneyTransactionUI, 2 : ItemTransactionUI, 3 : lotteryTransactionUI
     [SerializeField] private GameObject[] transactionUI_GameObject;
 
-    //0 : transformBothUI, 1 : transformGiveUI 
-    [SerializeField] private GameObject[] itemTransactionUI_GameObject;
-    [SerializeField] private GameObject lotteryStatusUI_GameObject;
-
     [SerializeField] private GameObject otherUserAddress_GameObject;
-
     //0 : Toggle, 1 : UI, 2 : InputField, 3 : Text
     [SerializeField] private GameObject[] giveCreditInput_Gameobject;
-
     //0 : Toggle, 1 : UI, 2 : InputField
     [SerializeField] private GameObject[] moneyTransactionInput_GameObject;
-
+    //0 : transformBothUI, 1 : transformGiveUI 
+    [SerializeField] private GameObject[] itemTransactionUI_GameObject;
     [SerializeField] private InputField lotteryBuyValue_InputField;
-
+    [SerializeField] private GameObject lotteryStatusUI_GameObject;
     [SerializeField] private GameObject PhoneContoll_GameObject;
+
+    public string uiStatus_string { get; private set; }
 
     int playerNumber_int;
     bool transformBothUIControll_bool = false;
     bool transformGiveUIControll_bool = false;
     bool lotteryStatuscontroll_bool = false;
     bool uiModeControll_bool = true;
-    public string uiStatus_string { get; private set; }
-
-    int phoneStatus = 0;
 
     void Awake() {
         Instance = this;
         uiStatus_string = "";
 
-        if (phoneStatus == 0) {
+
+        if (!Application.isMobilePlatform) {
             PhoneContoll_GameObject.SetActive(false);
         }
     }
@@ -67,15 +60,15 @@ public class ControllGameUI : MonoBehaviour {
     }
 
     private void LotteryChangeNumber(int oneNumber) {
-        playerNumber_int = int.Parse(blockChainFunction.lotteryTransactionLookValue_InputField.text) + oneNumber;
-        blockChainFunction.lotteryTransactionLookValue_InputField.text = "" + playerNumber_int;
+        playerNumber_int = int.Parse(updateUI.lotteryTransactionLookValue_InputField.GetComponent<InputField>().text) + oneNumber;
+        updateUI.lotteryTransactionLookValue_InputField.text = "" + playerNumber_int;
     }
 
     public void LotteryNextNumber() {
         LotteryChangeNumber(1);
     }
     public void LotteryBackNumber() {
-        if (int.Parse(blockChainFunction.lotteryTransactionLookValue_InputField.text) != 0) {
+        if (int.Parse(updateUI.lotteryTransactionLookValue_InputField.text) != 0) {
             LotteryChangeNumber(-1);
         }
     }
