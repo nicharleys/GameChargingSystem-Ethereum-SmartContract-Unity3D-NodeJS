@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 public class ControllGameUI : MonoBehaviour {
     public static ControllGameUI Instance;
@@ -170,4 +172,18 @@ public class ControllGameUI : MonoBehaviour {
             mainUI_GameObject[0].SetActive(true);
         }
     }
+
+   /* public IEnumerator test() {
+            WWWForm form = new WWWForm();
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            data.Add("download", "1");
+            data.Add("changeac", ChangeAC.text);//OldAC Text轉成string,取消Text用法(取消get改用set)
+
+            foreach (KeyValuePair<string, string> post in data) {
+                form.AddField(post.Key, post.Value);
+            }
+            WWW www = new WWW(ChangePlayerEnter, form);
+            yield return www;
+        
+    }*/
 }
