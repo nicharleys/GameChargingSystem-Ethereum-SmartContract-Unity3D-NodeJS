@@ -1045,8 +1045,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartLookLottery
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: LookLottery
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1255,8 +1255,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartBuyLottery
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: BuyLottery
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1507,89 +1507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174629775}
   m_CullTransparentMesh: 0
---- !u!1 &192778216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 192778219}
-  - component: {fileID: 192778218}
-  - component: {fileID: 192778217}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &192778217
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192778216}
-  m_Enabled: 1
---- !u!20 &192778218
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192778216}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &192778219
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192778216}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 177.03868, y: 97.269356, z: -0.13531494}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198962529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,8 +2608,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartLookLottery
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: LookLottery
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: LotteryTransaction_showStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3757,7 +3685,7 @@ Transform:
   - {fileID: 2086478864}
   - {fileID: 296019304}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485832757
 GameObject:
@@ -3941,6 +3869,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4426679274521328483}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: ExchangeItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5387,7 +5326,7 @@ RectTransform:
   - {fileID: 1441443868}
   - {fileID: 502182543}
   m_Father: {fileID: 1788551616}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21422224, y: 0.86733425}
   m_AnchorMax: {x: 0.82255566, y: 0.9157036}
@@ -5506,7 +5445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -13}
+  m_AnchoredPosition: {x: -3.9999924, y: -13.000001}
   m_SizeDelta: {x: -12, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746504134
@@ -5884,7 +5823,7 @@ Transform:
   - {fileID: 2061684286}
   - {fileID: 141533852}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763113674
 GameObject:
@@ -6509,8 +6448,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartTwoPointDeal
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: TwoPointDeal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6900,8 +6839,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartExchangeStatus
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: ExchangeStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8344,8 +8283,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartCancelExchange
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: CancelExchange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9214,7 +9153,7 @@ RectTransform:
   - {fileID: 1305339709}
   - {fileID: 1788551616}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9233,6 +9172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc26ae3550a4d24b972aba78495e004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateUI: {fileID: 2061684287}
   mainUI_GameObject:
   - {fileID: 1788551615}
   - {fileID: 1897288035}
@@ -10390,7 +10330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1332642254
 GameObject:
@@ -10616,8 +10556,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartGiveApprove
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: GiveApprove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12347,7 +12287,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
+      - m_Target: {fileID: 1160881407}
+        m_MethodName: ChangeAddressPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061684287}
         m_MethodName: ChangeAddressPosition
         m_Mode: 1
         m_Arguments:
@@ -12620,8 +12571,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 712664242}
   - {fileID: 1789898813}
+  - {fileID: 712664242}
   - {fileID: 1897288036}
   - {fileID: 1504169078}
   - {fileID: 2010655311}
@@ -12669,7 +12620,7 @@ RectTransform:
   - {fileID: 1687063445800182813}
   - {fileID: 428628707}
   m_Father: {fileID: 1788551616}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21422224, y: 0.9265194}
   m_AnchorMax: {x: 0.82366675, y: 0.97866744}
@@ -13076,8 +13027,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartLookLottery
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: LookLottery
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14210,8 +14161,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartPutExchange
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: PutExchange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14407,7 +14358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -13}
+  m_AnchoredPosition: {x: -3.9999924, y: -12.999999}
   m_SizeDelta: {x: -12, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044265829
@@ -14512,6 +14463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03cdb6a3120df4942ae8b8ee24e43620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockChainFunction: {fileID: 2061684285}
   uiValue_Text:
   - {fileID: 965557671}
   - {fileID: 1000237042}
@@ -15784,6 +15736,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1160881407}
+        m_MethodName: SearchOtherAddress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061684287}
         m_MethodName: ChangeAddressPosition
         m_Mode: 1
         m_Arguments:
@@ -17584,7 +17547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -13}
+  m_AnchoredPosition: {x: -3.9999924, y: -13}
   m_SizeDelta: {x: -12, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6030002560735058195
@@ -17857,8 +17820,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2061684285}
-        m_MethodName: StartLookExchange_Other
+      - m_Target: {fileID: 2061684287}
+        m_MethodName: LookExchange_Other
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

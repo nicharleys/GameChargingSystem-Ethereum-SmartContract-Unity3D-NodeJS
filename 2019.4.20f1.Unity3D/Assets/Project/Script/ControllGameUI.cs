@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
 public class ControllGameUI : MonoBehaviour {
-
     public static ControllGameUI Instance;
-    UpdateUI updateUI;
+    [SerializeField] UpdateUI updateUI;
     //0 : userUI, 1 : sideUI
     [SerializeField] private GameObject[] mainUI_GameObject;
     //0 : giveCreditUI, 1 : moneyTransactionUI, 2 : ItemTransactionUI, 3 : lotteryTransactionUI
@@ -22,7 +20,6 @@ public class ControllGameUI : MonoBehaviour {
     [SerializeField] private GameObject PhoneContoll_GameObject;
 
     public string uiStatus_string { get; private set; }
-
     int playerNumber_int;
     bool transformBothUIControll_bool = false;
     bool transformGiveUIControll_bool = false;
@@ -32,8 +29,6 @@ public class ControllGameUI : MonoBehaviour {
     void Awake() {
         Instance = this;
         uiStatus_string = "";
-
-
         if (!Application.isMobilePlatform) {
             PhoneContoll_GameObject.SetActive(false);
         }
@@ -58,12 +53,10 @@ public class ControllGameUI : MonoBehaviour {
     public void LotteryTransaction() {
         MainUIControll("LotteryTransaction", transactionUI_GameObject[3]);
     }
-
     private void LotteryChangeNumber(int oneNumber) {
         playerNumber_int = int.Parse(updateUI.lotteryTransactionLookValue_InputField.GetComponent<InputField>().text) + oneNumber;
         updateUI.lotteryTransactionLookValue_InputField.text = "" + playerNumber_int;
     }
-
     public void LotteryNextNumber() {
         LotteryChangeNumber(1);
     }
@@ -72,7 +65,6 @@ public class ControllGameUI : MonoBehaviour {
             LotteryChangeNumber(-1);
         }
     }
-
     private void ToggleChange(GameObject toggle, GameObject address, GameObject ui, GameObject input) {
         if (toggle.GetComponent<Toggle>().isOn == true) {
             address.SetActive(false);
@@ -90,7 +82,6 @@ public class ControllGameUI : MonoBehaviour {
     public void SearchOtherAddress() {
         ToggleChange(giveCreditInput_Gameobject[0], otherUserAddress_GameObject, giveCreditInput_Gameobject[1], giveCreditInput_Gameobject[2]);
     }
-
     public void ChangeAddressPosition() {
         if (giveCreditInput_Gameobject[3].GetComponent<Text>().text == "對方給予") {
             giveCreditInput_Gameobject[3].GetComponent<Text>().text = "自己給予";
@@ -99,7 +90,6 @@ public class ControllGameUI : MonoBehaviour {
             giveCreditInput_Gameobject[3].GetComponent<Text>().text = "對方給予";
         }
     }
-
     private void ItemTransactionInnerlayerUI(bool uiControll, GameObject uiOption) {
         if (uiControll == false) {
             uiControll = true;

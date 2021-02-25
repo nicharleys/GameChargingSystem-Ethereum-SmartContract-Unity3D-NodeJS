@@ -10,7 +10,7 @@ const app = express();
 const web3 = new Web3();
 const eth = web3.eth;
 
-web3.setProvider(new web3.providers.HttpProvider('http://163.17.137.169:6345'));
+web3.setProvider(new web3.providers.HttpProvider('http://127.0.0.1:6345'));
 const myContract = web3.eth.contract(contract.ABI).at(contract.address);
 
 /*---------------------------------------------------------------------------*/

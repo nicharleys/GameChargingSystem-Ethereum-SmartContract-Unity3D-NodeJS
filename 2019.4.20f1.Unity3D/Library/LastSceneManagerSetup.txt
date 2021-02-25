@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Project/Scenes/GameRoomScene.unity
+- path: Assets/Project/Scenes/SignUI.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockChainFunction : MonoBehaviour {
+public class BlockChainFunction : MonoBehaviour, BlockChain {
     public void UnlockAccount(string useraddresstext, string userpasswordtext) {
         Dictionary<string, object> parameters = new Dictionary<string, object>();
         parameters.Add("status", "UnlockAccount");
@@ -115,6 +115,4 @@ public class BlockChainFunction : MonoBehaviour {
         parameters.Add("sendamount", sendamounttext);
         PhotonNetwork.WebRpc("Transform", parameters);
     }
-
-    
 }

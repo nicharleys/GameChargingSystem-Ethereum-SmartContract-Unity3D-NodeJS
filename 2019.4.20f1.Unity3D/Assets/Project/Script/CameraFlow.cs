@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 public class CameraFlow : MonoBehaviour {
     public Transform target;
     public float distanceUp = 0f;
