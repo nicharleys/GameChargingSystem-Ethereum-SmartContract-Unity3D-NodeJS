@@ -5445,7 +5445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.9999924, y: -13.000001}
+  m_AnchoredPosition: {x: -4, y: -13.000001}
   m_SizeDelta: {x: -12, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746504134
@@ -14358,7 +14358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.9999924, y: -12.999999}
+  m_AnchoredPosition: {x: -4, y: -12.999999}
   m_SizeDelta: {x: -12, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044265829
@@ -14515,6 +14515,59 @@ MonoBehaviour:
   lotteryTransactionLookValue_InputField: {fileID: 2431586}
   nowClickAddress_Text: {fileID: 428628708}
   changeAddressPosition_Text: {fileID: 362973977}
+  contractStatus:
+    callnumber: 
+    getnamereturn: 
+    getownerreturn: 
+  listenEvent_New:
+    callnumber: 
+    blockHash: 
+  listenEvent_Old:
+    blockHash: 
+  giveApprove:
+    callnumber: 
+    value: 
+  twoPointDeal:
+    callnumber: 
+    value: 
+  balanceOf:
+    callnumber: 
+    value: 
+  allowance:
+    callnumber: 
+    value: 
+  lookExchange_Self:
+    callnumber: 
+    balances: 
+    item1: 
+    item2: 
+    status: 
+  lookExchange_Other:
+    callnumber: 
+    balances: 
+    item1: 
+    item2: 
+    status: 
+  lookLottery:
+    callnumber: 
+    getlotteryOwnerreturn: 
+    getlookMoneyreturn: 
+    getlookPlayersreturn: 
+  putExchange:
+    callnumber: 
+    value: 
+  exchangeStatus:
+    callnumber: 
+    value: 
+  cancelExchange:
+    callnumber: 
+    value: 
+  exchangeItem:
+    callnumber: 
+    value: 
+  buyLottery:
+    callnumber: 
+    value: 
 --- !u!1 &2071044940
 GameObject:
   m_ObjectHideFlags: 0
@@ -17547,7 +17600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.9999924, y: -13}
+  m_AnchoredPosition: {x: -4, y: -13}
   m_SizeDelta: {x: -12, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6030002560735058195

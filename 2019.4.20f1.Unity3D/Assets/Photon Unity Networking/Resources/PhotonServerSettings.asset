@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AppID: bbd9f52a-c5f1-44ed-98cd-08473cb3e99c
   VoiceAppID: 
-  ChatAppID: b26589d1-187a-4282-a331-02369a67955b
+  ChatAppID: bbd9f52a-c5f1-44ed-98cd-08473cb3e99c
   HostType: 1
   PreferredRegion: 3
   EnabledRegions: -1
