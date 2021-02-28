@@ -1,14 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 public class ControllGameUI : MonoBehaviour {
     public static ControllGameUI Instance;
-    [SerializeField] UpdateUI updateUI;
+    public UpdateUI updateUI;
     //0 : userUI, 1 : sideUI
-    [SerializeField] private GameObject[] mainUI_GameObject;
-    //0 : giveCreditUI, 1 : moneyTransactionUI, 2 : ItemTransactionUI, 3 : lotteryTransactionUI
-    [SerializeField] private GameObject[] transactionUI_GameObject;
+    //[SerializeField] public GameObject[] mainUI_GameObject;
+    ////0 : giveCreditUI, 1 : moneyTransactionUI, 2 : ItemTransactionUI, 3 : lotteryTransactionUI
+    //[SerializeField] private GameObject[] transactionUI_GameObject;
+
+    public GameObject userUI;
+    public GameObject sideUI;
+    public GameObject giveCreditUI;
+    public GameObject moneyTransactionUI;
+    public GameObject itemTransactionUI;
+    public GameObject lotteryTransactionUI;
+
+    public GameObject lotteryStatusUI;
 
     [SerializeField] private GameObject otherUserAddress_GameObject;
     //0 : Toggle, 1 : UI, 2 : InputField, 3 : Text
@@ -40,20 +47,20 @@ public class ControllGameUI : MonoBehaviour {
     }
     private void MainUIControll(string uiStatus, GameObject transactionUI) {
         uiStatus_string = uiStatus;
-        mainUI_GameObject[1].SetActive(false);
+        sideUI.SetActive(false);
         transactionUI.SetActive(true);
     }
     public void GiveCredit() {
-        MainUIControll("GiveCredit", transactionUI_GameObject[0]);
+        MainUIControll("GiveCredit", giveCreditUI);
     }
     public void MoneyTransaction() {
-        MainUIControll("MoneyTransaction", transactionUI_GameObject[1]);
+        MainUIControll("MoneyTransaction", moneyTransactionUI);
     }
     public void ItemTransaction() {
-        MainUIControll("ItemTransaction", transactionUI_GameObject[2]);
+        MainUIControll("ItemTransaction", giveCreditUI);
     }
     public void LotteryTransaction() {
-        MainUIControll("LotteryTransaction", transactionUI_GameObject[3]);
+        MainUIControll("LotteryTransaction", lotteryTransactionUI);
     }
     private void LotteryChangeNumber(int oneNumber) {
         playerNumber_int = int.Parse(updateUI.lotteryTransactionLookValue_InputField.GetComponent<InputField>().text) + oneNumber;
@@ -104,13 +111,13 @@ public class ControllGameUI : MonoBehaviour {
     }
     public void ItemTransaction_showBothItem() {
         transformGiveUIControll_bool = false;
-        itemTransactionUI_GameObject[1].SetActive(false);
-        ItemTransactionInnerlayerUI(transformBothUIControll_bool, itemTransactionUI_GameObject[0]);
+        itemTransactionUI.SetActive(false);
+        ItemTransactionInnerlayerUI(transformBothUIControll_bool, itemTransactionUI);
     }
     public void ItemTransaction_showPutItem() {
         transformBothUIControll_bool = false;
-        itemTransactionUI_GameObject[0].SetActive(false);
-        ItemTransactionInnerlayerUI(transformGiveUIControll_bool, itemTransactionUI_GameObject[1]);
+        itemTransactionUI.SetActive(false);
+        ItemTransactionInnerlayerUI(transformGiveUIControll_bool, itemTransactionUI);
     }
 
     public void LotteryTransaction_showStatus() {
@@ -124,13 +131,13 @@ public class ControllGameUI : MonoBehaviour {
         ui[2].GetComponent<InputField>().text = "";
         ui[1].SetActive(false);
         transactionUI.SetActive(false);
-        mainUI_GameObject[1].SetActive(true);
+        sideUI.SetActive(true);
     }
     public void GiveCreditBack() {
-        InputUIBack(giveCreditInput_Gameobject, transactionUI_GameObject[0]);
+        InputUIBack(giveCreditInput_Gameobject, giveCreditUI);
     }
     public void MoneyTransactionBack() {
-        InputUIBack(moneyTransactionInput_GameObject, transactionUI_GameObject[1]);
+        InputUIBack(moneyTransactionInput_GameObject, moneyTransactionUI);
     }
 
     public void ItemTransactionBack() {
@@ -139,51 +146,41 @@ public class ControllGameUI : MonoBehaviour {
         itemTransactionUI_GameObject[0].SetActive(false);
         transformGiveUIControll_bool = false;
         itemTransactionUI_GameObject[1].SetActive(false);
-        transactionUI_GameObject[2].SetActive(false);
-        mainUI_GameObject[1].SetActive(true);
+        giveCreditUI.SetActive(false);
+        itemTransactionUI.SetActive(true);
     }
     public void LotteryTransactionBack() {
         uiStatus_string = "";
         lotteryBuyValue_InputField.text = "";
         playerNumber_int = 0;
         lotteryStatusUI_GameObject.SetActive(false);
-        transactionUI_GameObject[3].SetActive(false);
-        mainUI_GameObject[1].SetActive(true);
+        lotteryTransactionUI.SetActive(false);
+        sideUI.SetActive(true);
     }
     public void CloseUI() {
         ClickObject.Instance.ControllUI = false;
         otherUserAddress_GameObject.GetComponent<Text>().text = "";
-        mainUI_GameObject[0].SetActive(false);
+        userUI.SetActive(false);
         uiModeControll_bool = true;
     }
     private void UIModeControll() {
-        if (uiModeControll_bool == true && GameObject.Find("Person(Clone)")) {
-            if (ClickObject.Instance.ControllUI == true) {
-                otherUserAddress_GameObject.GetComponent<Text>().text = ClickObject.Instance.OtherUserAddress;
-                mainUI_GameObject[0].SetActive(true);
-            }
-            else {
-                mainUI_GameObject[0].SetActive(false);
+        if (uiModeControll_bool == true) {
+            if (GameObject.Find("Person(Clone)")) {
+                if (ClickObject.Instance.ControllUI == true) {
+                    otherUserAddress_GameObject.GetComponent<Text>().text = ClickObject.Instance.OtherUserAddress;
+                    userUI.SetActive(true);
+                }
+                else if (ClickObject.Instance.ControllUI == false) {
+                    userUI.SetActive(false);
+                }
             }
         }
-        if (Input.GetKey(KeyCode.Tab) && ClickObject.Instance.ControllUI == false) {
-            uiModeControll_bool = false;
-            otherUserAddress_GameObject.GetComponent<Text>().text = "";
-            mainUI_GameObject[0].SetActive(true);
+        if (Input.GetKey(KeyCode.Tab)) {
+            if (ClickObject.Instance.ControllUI == false) {
+                uiModeControll_bool = false;
+                otherUserAddress_GameObject.GetComponent<Text>().text = "";
+                userUI.SetActive(true);
+            }
         }
     }
-
-   /* public IEnumerator test() {
-            WWWForm form = new WWWForm();
-            Dictionary<string, string> data = new Dictionary<string, string>();
-            data.Add("download", "1");
-            data.Add("changeac", ChangeAC.text);//OldAC Text轉成string,取消Text用法(取消get改用set)
-
-            foreach (KeyValuePair<string, string> post in data) {
-                form.AddField(post.Key, post.Value);
-            }
-            WWW www = new WWW(ChangePlayerEnter, form);
-            yield return www;
-        
-    }*/
 }

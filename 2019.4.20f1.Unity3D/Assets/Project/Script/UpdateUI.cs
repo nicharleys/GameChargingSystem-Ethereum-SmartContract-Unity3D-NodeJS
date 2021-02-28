@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateUI : MonoBehaviour
-{
+public class UpdateUI : MonoBehaviour {
     [SerializeField] private BlockChainFunction blockChainFunction;
     //0 : ContractNameShow_Text, 1 : ContractOwnerShow_Text,  2 : GiveCreditUserMoney_Text, 3 :　MoneyTransactionUserMoney_Text, 4 :  ItemTransactionUserMoney_Text, 5 : LotteryTransactionUserMoney_Text, 6 : AllowanceValue_Text, 7 : OtherItem1Value_Text, 8 : OtherItem2Value_Text, 9 : OtherMoneyValue_Text, 10 : OtherStatusValue_Text, 11 : SelfItem1Value_Text, 12 : SelfItem2Value_Text,13: SelfMoneyValue_Text, 14 : SelfStatusValue_Text, 15 : LotteryOwnerName_Text, 16 : LotterySaveMoney_Text, 17 : LotteryPlayersName_Text
     [SerializeField] private Text[] uiValue_Text;
@@ -17,11 +16,10 @@ public class UpdateUI : MonoBehaviour
     [SerializeField] public GameObject[] moneyTransaction_GameObject;
     [Space(10)]
     //0 : itemTransactionBack_Button, 1 : itemTransactionGive_Button, 2 : itemTransactionChangeStatus_Button, 3 : itemTransactionCancel_Button, 4 : itemTransactionEnter_Button, 5 : itemTransactionBalances_InputField, 6 : itemTransactionItem1_InputField, 7 : itemTransactionItem2_InputField
-    [SerializeField] public GameObject[] ItemTransaction_GameObject;
+    [SerializeField] public GameObject[] itemTransaction_GameObject;
     [Space(10)]
     //0 : lotteryTransactionBack_Button, 1 : lotteryTransactionLook_Button, 2 : lotteryTransactionBuy_Button, 3 : lotteryTransactionLookNext_Button, 4 : lotteryTransactionLookBack_Button, 5 : lotteryTransaction_InputField
     [SerializeField] public GameObject[] lotteryTransaction_GameObject;
-    [Space(10)]
     public InputField lotteryTransactionLookValue_InputField;
 
     public Text nowClickAddress_Text;
@@ -200,7 +198,7 @@ public class UpdateUI : MonoBehaviour
         }
     }
     private void StartPutExchange() {
-        blockChainFunction.PutExchange(PhotonNetwork.playerName, FirstCheck.Instance.UserPassword, ClickObject.Instance.OtherUserAddress, ItemTransaction_GameObject[5].GetComponent<InputField>().text, ItemTransaction_GameObject[6].GetComponent<InputField>().text, ItemTransaction_GameObject[7].GetComponent<InputField>().text);
+        blockChainFunction.PutExchange(PhotonNetwork.playerName, FirstCheck.Instance.UserPassword, ClickObject.Instance.OtherUserAddress, itemTransaction_GameObject[5].GetComponent<InputField>().text, itemTransaction_GameObject[6].GetComponent<InputField>().text, itemTransaction_GameObject[7].GetComponent<InputField>().text);
     }
     private void StartLookExchange_Self() {
         blockChainFunction.LookExchange_Self(PhotonNetwork.playerName, ClickObject.Instance.OtherUserAddress);
@@ -221,7 +219,7 @@ public class UpdateUI : MonoBehaviour
         blockChainFunction.BuyLottery(PhotonNetwork.playerName, FirstCheck.Instance.UserPassword, lotteryTransaction_GameObject[5].GetComponent<InputField>().text);
     }
     private void StartLookLottery1() {
-        blockChainFunction.LookLottery(int.Parse(lotteryTransaction_GameObject[6].GetComponent<InputField>().text));
+        blockChainFunction.LookLottery(int.Parse(lotteryTransactionLookValue_InputField.text));
     }
     void OnWebRpcResponse(OperationResponse operationResponse) {
         if (operationResponse.ReturnCode != 0) {
@@ -425,11 +423,11 @@ public class UpdateUI : MonoBehaviour
         moneyTransaction_GameObject[3].GetComponent<InputField>().interactable = OnOrOff;
         moneyTransaction_GameObject[4].GetComponent<Toggle>().interactable = OnOrOff;
 
-        ItemTransaction_GameObject[0].GetComponent<Button>().interactable = OnOrOff;
-        ItemTransaction_GameObject[1].GetComponent<Button>().interactable = OnOrOff;
-        ItemTransaction_GameObject[2].GetComponent<Button>().interactable = OnOrOff;
-        ItemTransaction_GameObject[3].GetComponent<Button>().interactable = OnOrOff;
-        ItemTransaction_GameObject[4].GetComponent<Button>().interactable = OnOrOff;
+        itemTransaction_GameObject[0].GetComponent<Button>().interactable = OnOrOff;
+        itemTransaction_GameObject[1].GetComponent<Button>().interactable = OnOrOff;
+        itemTransaction_GameObject[2].GetComponent<Button>().interactable = OnOrOff;
+        itemTransaction_GameObject[3].GetComponent<Button>().interactable = OnOrOff;
+        itemTransaction_GameObject[4].GetComponent<Button>().interactable = OnOrOff;
 
         lotteryTransaction_GameObject[0].GetComponent<Button>().interactable = OnOrOff;
         lotteryTransaction_GameObject[1].GetComponent<Button>().interactable = OnOrOff;

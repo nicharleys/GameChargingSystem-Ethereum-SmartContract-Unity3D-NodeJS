@@ -22,6 +22,7 @@ public class MultiplayerMove : Photon.MonoBehaviour {
     bool reduceMoveStateQ = true;
     bool reduceMoveStateE = true;
     bool reduceMoveStateShift = true;
+
     bool useTranformView = true;
     bool closeOther = false;
 
@@ -30,14 +31,12 @@ public class MultiplayerMove : Photon.MonoBehaviour {
         playerRigidbody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
-        if (PhotonNetwork.connected == true) {
-            if (PhotonView.isMine == true) {
-                photonView.RPC("RPC_GiveName", PhotonTargets.All);
-            }
-            else {
-                userCamera.SetActive(false);
-                closeOther = true;
-            }
+        if (PhotonView.isMine == false && PhotonNetwork.connected == true) {
+            userCamera.SetActive(false);
+            closeOther = true;
+        }
+        if (PhotonView.isMine == true && PhotonNetwork.connected == true) {
+            photonView.RPC("RPC_GiveName", PhotonTargets.All);
         }
     }
     private void FixedUpdate() {
@@ -72,59 +71,75 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             TargetRotation = (Quaternion)stream.ReceiveNext();
         }
     }
-    private void GoStraight(bool reduceMoveState, Vector3 vector) {
-        if (moveSpeed < 7) {
-            moveSpeed += 0.5f;
-        }
-        reduceMoveState = false;
-        reduceMoveStateQ = false;
-        reduceMoveStateE = false;
-        this.transform.Translate(vector * Time.deltaTime * moveSpeed);
-        ControllWalkOrRun();
-    }
-    private void GoHorizontal(bool reduceMoveState, float speed) {
-        if (turnSpeed < 70) {
-            turnSpeed += 0.5f;
-        }
-        reduceMoveState = false;
-        this.transform.Rotate(Vector3.up, Time.deltaTime * speed);
-        ControllWalkOrRun();
-    }
-    private void GoCurve(bool reduceMoveState, float speed) {
-        if (moveSpeed < 7) {
-            moveSpeed += 0.5f;
-        }
-        reduceMoveStateS = false;
-        reduceMoveStateQ = false;
-        reduceMoveStateE = false;
-        this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
-        ControllWalkOrRun();
-        if (turnSpeed < 70) {
-            turnSpeed += 0.5f;
-        }
-        reduceMoveState = false;
-        this.transform.Rotate(Vector3.up, Time.deltaTime * speed);
-        ControllWalkOrRun();
-    }
     private void StartMove() {
         if (Input.GetKey(KeyCode.W) || MobileControll.Instance.keyboard == "W") {
-            GoStraight(reduceMoveStateS, Vector3.forward);
+            if (moveSpeed < 7) {
+                moveSpeed += 0.5f;
+            }
+            reduceMoveStateS = false;
+            reduceMoveStateQ = false;
+            reduceMoveStateE = false;
+            this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+            ControllWalkOrRun();
         }
         if (Input.GetKey(KeyCode.S) || MobileControll.Instance.keyboard == "S") {
-            GoStraight(reduceMoveStateW, Vector3.back);
+            if (moveSpeed < 7) {
+                moveSpeed += 0.5f;
+            }
+            reduceMoveStateW = false;
+            reduceMoveStateQ = false;
+            reduceMoveStateE = false;
+            this.transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+            ControllWalkOrRun();
         }
         if (Input.GetKey(KeyCode.A) || MobileControll.Instance.keyboard == "A") {
-            GoHorizontal(reduceMoveStateD, -turnSpeed);
+            if (turnSpeed < 70) {
+                turnSpeed += 0.5f;
+            }
+            reduceMoveStateD = false;
+            this.transform.Rotate(Vector3.up, Time.deltaTime * -turnSpeed);
+            ControllWalkOrRun();
         }
         if (Input.GetKey(KeyCode.D) || MobileControll.Instance.keyboard == "D") {
-            GoHorizontal(reduceMoveStateA, turnSpeed);
+            if (turnSpeed < 70) {
+                turnSpeed += 0.5f;
+            }
+            reduceMoveStateA = false;
+            this.transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed);
+            ControllWalkOrRun();
         }
         if (jumped == false) {
             if (Input.GetKey(KeyCode.Q) || MobileControll.Instance.keyboard == "Q") {
-                GoCurve(reduceMoveStateD, -turnSpeed);
+                if (moveSpeed < 7) {
+                    moveSpeed += 0.5f;
+                }
+                reduceMoveStateS = false;
+                reduceMoveStateQ = false;
+                reduceMoveStateE = false;
+                this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+                ControllWalkOrRun();
+                if (turnSpeed < 70) {
+                    turnSpeed += 0.5f;
+                }
+                reduceMoveStateD = false;
+                this.transform.Rotate(Vector3.up, Time.deltaTime * -turnSpeed);
+                ControllWalkOrRun();
             }
             if (Input.GetKey(KeyCode.E) || MobileControll.Instance.keyboard == "E") {
-                GoCurve(reduceMoveStateA, turnSpeed);
+                if (moveSpeed < 7) {
+                    moveSpeed += 0.5f;
+                }
+                reduceMoveStateS = false;
+                reduceMoveStateQ = false;
+                reduceMoveStateE = false;
+                this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+                ControllWalkOrRun();
+                if (turnSpeed < 70) {
+                    turnSpeed += 0.5f;
+                }
+                reduceMoveStateA = false;
+                this.transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed);
+                ControllWalkOrRun();
             }
         }
         if (MobileControll.Instance.keyboard == "P") {
@@ -136,51 +151,104 @@ public class MultiplayerMove : Photon.MonoBehaviour {
             reduceMoveStateQ = true;
         }
     }
-    private void StopMove(KeyCode keyCode, bool vector) {
-        if (Input.GetKeyUp(keyCode)) {
-            vector = true;
-        }
-    }
     private void StopMoveState() {
-        StopMove(KeyCode.W, reduceMoveStateW);
-        StopMove(KeyCode.S, reduceMoveStateS);
-        StopMove(KeyCode.A, reduceMoveStateA);
-        StopMove(KeyCode.D, reduceMoveStateD);
-        StopMove(KeyCode.LeftShift, reduceMoveStateShift);
-        StopMove(KeyCode.Q, reduceMoveStateE);
-
-        if (jumped == false) {
-            StopMove(KeyCode.Q, reduceMoveStateE);
-            StopMove(KeyCode.E, reduceMoveStateQ);
+        if (Input.GetKeyUp(KeyCode.W)) {
+            reduceMoveStateW = true;
         }
-    }
-    private void ReduceMoveStateControll(bool reduceMoveState, float moveSpeedvalue, Vector3 vector, float vectorSpeed) {
-        if (reduceMoveState == true) {
-            if (moveSpeed > 0) {
-                moveSpeed -= moveSpeedvalue;
-                this.transform.Translate(vector * Time.deltaTime * vectorSpeed);
-                ControllWalkOrRun();
+        if (Input.GetKeyUp(KeyCode.S)) {
+            reduceMoveStateS = true;
+        }
+        if (Input.GetKeyUp(KeyCode.A)) {
+            reduceMoveStateA = true;
+        }
+        if (Input.GetKeyUp(KeyCode.D)) {
+            reduceMoveStateD = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift)) {
+            reduceMoveStateShift = true;
+        }
+        if (jumped == false) {
+            if (Input.GetKeyUp(KeyCode.Q)) {
+                reduceMoveStateE = true;
             }
-            else {
-                reduceMoveState = false;
-                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            if (Input.GetKeyUp(KeyCode.E)) {
+                reduceMoveStateQ = true;
             }
         }
     }
     private void StopMove() {
-        ReduceMoveStateControll(reduceMoveStateW, 1f, Vector3.forward, moveSpeed);
-        ReduceMoveStateControll(reduceMoveStateS, 1f, Vector3.back, moveSpeed);
-        ReduceMoveStateControll(reduceMoveStateA, 2f, Vector3.up, -turnSpeed);
-        ReduceMoveStateControll(reduceMoveStateD, 2f, Vector3.up, turnSpeed);
-        ReduceMoveStateControll(reduceMoveStateQ, 1f, Vector3.left, moveSpeed);
-        ReduceMoveStateControll(reduceMoveStateE, 1f, Vector3.right, moveSpeed);
-
+        if (reduceMoveStateW == true) {
+            if (moveSpeed > 0) {
+                moveSpeed -= 1f;
+                this.transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+                ControllWalkOrRun();
+            }
+            else {
+                reduceMoveStateW = false;
+                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            }
+        }
+        if (reduceMoveStateS == true) {
+            if (moveSpeed > 0) {
+                moveSpeed -= 1f;
+                this.transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+                ControllWalkOrRun();
+            }
+            else {
+                reduceMoveStateS = false;
+                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            }
+        }
+        if (reduceMoveStateA == true) {
+            if (turnSpeed > 0) {
+                turnSpeed -= 2f;
+                this.transform.Rotate(Vector3.up, Time.deltaTime * -turnSpeed);
+                ControllWalkOrRun();
+            }
+            else {
+                reduceMoveStateA = false;
+                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            }
+        }
+        if (reduceMoveStateD == true) {
+            if (turnSpeed > 0) {
+                turnSpeed -= 2f;
+                this.transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed);
+                ControllWalkOrRun();
+            }
+            else {
+                reduceMoveStateD = false;
+                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            }
+        }
+        if (reduceMoveStateQ == true) {
+            if (moveSpeed > 0) {
+                moveSpeed -= 1f;
+                this.transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+                ControllWalkOrRun();
+            }
+            else {
+                reduceMoveStateQ = false;
+                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            }
+        }
+        if (reduceMoveStateE == true) {
+            if (moveSpeed > 0) {
+                moveSpeed -= 1f;
+                this.transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+                ControllWalkOrRun();
+            }
+            else {
+                reduceMoveStateE = false;
+                photonView.RPC("RPC_PerformStopWalk", PhotonTargets.All);
+            }
+        }
         if (reduceMoveStateShift == true) {
             if (moveSpeed > 7 || turnSpeed > 70) {
                 if (moveSpeed > 7) {
                     moveSpeed -= 0.5f;
                 }
-                else if (turnSpeed > 70) {
+                if (turnSpeed > 70) {
                     turnSpeed -= 1f;
                 }
             }
@@ -199,19 +267,23 @@ public class MultiplayerMove : Photon.MonoBehaviour {
         }
     }
     private void StartJump() {
-        if (Input.GetKeyDown(KeyCode.Space) && jumped == false) {
-            photonView.RPC("RPC_PerformJump", PhotonTargets.All);
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            if (jumped == false) {
+                photonView.RPC("RPC_PerformJump", PhotonTargets.All);
+            }
         }
     }
     private void StartRun() {
-        if (Input.GetKey(KeyCode.LeftShift) && (moveSpeed >= 7 || turnSpeed >= 70)) {
-            if (moveSpeed < 28) {
-                moveSpeed += 1f;
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            if (moveSpeed >= 7 || turnSpeed >= 70) {
+                if (moveSpeed < 28) {
+                    moveSpeed += 1f;
+                }
+                if (turnSpeed < 200) {
+                    turnSpeed += 1f;
+                }
+                walkOrRunLock = 1;
             }
-            else if (turnSpeed < 200) {
-                turnSpeed += 1f;
-            }
-            walkOrRunLock = 1;
         }
     }
     IEnumerator waitJump() {
