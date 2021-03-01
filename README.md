@@ -2,7 +2,7 @@
  
 ### 作者:[nicharleys](https://github.com/nicharleys) 建置
 
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS" alt="Hits" data-canonical-src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS" style="max-width:100%;"></a> 
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS_1" alt="Hits" data-canonical-src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS" style="max-width:100%;"></a> 
 
 
 <br><br><br>
