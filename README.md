@@ -2,7 +2,7 @@
  
 ### 作者:[nicharleys](https://github.com/nicharleys) 建置
 
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS" alt="Hits" data-canonical-src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS" style="max-width:100%;"></a> 
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS" alt="Hits" data-canonical-src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS1" style="max-width:100%;"></a> 
 
 
 <br><br><br>
@@ -346,7 +346,7 @@
             <div>
             <b> 2.</b><br>
             <b>cmd到要設置的資料夾。</b><br>
-            <b>範例的資料夾： Ethtest_ERC20。</b>
+            <b>範例的資料夾： Geth。</b>
            </div>
         </td>
     </tr>
@@ -367,7 +367,7 @@
         <td>
             <div>
             <b> 4.</b><br>
-            <b>cmd到設置資料夾內的geth資料夾。</b>
+            <b>cmd到最外層的geth資料夾。</b>
            </div>
         </td>
     </tr>
@@ -626,16 +626,6 @@
         <td>
             <div>
             <b> 2.</b><br>
-            <b>修改NodeJS文件的Dapp文件的index.js檔。</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b> 3.</b><br>
             <b>修改Dapp文件的contract文件內的contract.js檔。</b>
            </div>
         </td>
@@ -645,7 +635,7 @@
     <tr>
         <td>
             <div>
-            <b> 4.</b><br>
+            <b> 3.</b><br>
             <b>將智能合約ABI覆蓋至ABI:[ ]內。</b>
            </div>
         </td>
@@ -655,7 +645,7 @@
     <tr>
         <td>
             <div>
-            <b> 5.</b><br>
+            <b> 4.</b><br>
             <b>將智能合約地址覆蓋至底部的address:” ”內。</b>
            </div>
         </td>
@@ -665,7 +655,7 @@
     <tr>
         <td>
             <div>
-            <b> 6.</b><br>
+            <b> 5.</b><br>
             <b>設置與Dapp功能對應的Photon Cloud設定。</b>
            </div>
         </td>
@@ -960,7 +950,9 @@
 </table>
 <br>
 <br>    
+
 # IV、文件說明
+
 <span id="head1">  <h2> 智能合約設計 </h2> </span>
 
 <div> 
