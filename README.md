@@ -8,9 +8,13 @@
 <br><br><br>
 
 <div align="center">
-   <img src="https://github.com/bruce601080102/Expo_ReactNative_ObjectDection_CloudConnection/blob/master/img/136944.gif"  width="400" height="600" "  />
-   <img src="https://github.com/bruce601080102/Expo_ReactNative_ObjectDection_CloudConnection/blob/master/img/136942.gif"  width="400" height="600" " />       </div>
+   <img src="https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS/blob/main/Gif/1.gif"  width="400" height="228" "  />
+   <img src="https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS/blob/main/Gif/2.gif"  width="400" height="228" " /> <br>    
+    <img src="https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS/blob/main/Gif/3.gif"  width="400" height="228" "  />
+   <img src="https://github.com/nicharleys/GameChargingSystem-Ethereum-SmartContract-Unity3D-NodeJS/blob/main/Gif/4.gif"  width="400" height="228" " /> 
+</div>
 
+<br><br><br>
 # I、介紹
 
 <div>
@@ -132,12 +136,14 @@
         <td>
             <div>
             <b>6.</b><br>
-            <strong font-size:13px;>啟動Unity3D遊戲。</strong>
+            <strong font-size:13px;>設置Unity3D設定。</strong>
            </div>
         </td>
     </tr>
 </table>
 </div> 
+
+[Unity3D設定](#head9)
 
 <br>
 <br>
@@ -484,11 +490,14 @@
         <td>
             <div>
             <b> 10.</b><br>
-            <b>選擇發佈帳號。</b>
+            <b>創建並選擇發佈帳號。</b>
            </div>
         </td>
     </tr>
 </table>
+
+[創建新帳號](#code3)
+
 <table border="1">
     <tr>
         <td>
@@ -515,17 +524,20 @@
         <td>
             <div>
             <b> 13.</b><br>
-            <b>按下Deploy發佈智能合約。</b>
+            <b>解鎖帳號</b>
            </div>
         </td>
     </tr>
 </table>
+
+[解鎖帳號](#code5)
+
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 14.</b><br>
-            <b>紀錄發佈後產出的智能合約地址。</b>
+            <b>在有足夠的乙太幣情況下，按下Deploy發佈智能合約，若沒有請執行挖礦。</b>
            </div>
         </td>
     </tr>
@@ -535,17 +547,20 @@
         <td>
             <div>
             <b> 15.</b><br>
-            <b>編輯器選項選擇編輯Compile。</b>
+            <b>執行挖礦來打包合約創建的交易。</b>
            </div>
         </td>
     </tr>
 </table>
+
+[指定挖礦帳號](#code4) 、 [執行挖礦](#code6)
+
 <table border="1">
     <tr>
         <td>
             <div>
             <b> 16.</b><br>
-            <b>點選ABI或Details的ABI複製智能合約ABI資料。</b>
+            <b>紀錄發佈後產出的智能合約地址。</b>
            </div>
         </td>
     </tr>
@@ -555,7 +570,7 @@
         <td>
             <div>
             <b> 17.</b><br>
-            <b>紀錄智能合約ABI資料。</b>
+            <b>編輯器選項選擇編輯Compile。</b>
            </div>
         </td>
     </tr>
@@ -565,6 +580,26 @@
         <td>
             <div>
             <b> 18.</b><br>
+            <b>點選ABI或Details的ABI複製智能合約ABI資料。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 19.</b><br>
+            <b>紀錄智能合約ABI資料。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 20.</b><br>
             <b>更換合約相關資料。</b>
            </div>
         </td>
@@ -601,17 +636,6 @@
         <td>
             <div>
             <b> 3.</b><br>
-            <b>重設連線網址，port號需依照私有鏈的啟動指令， 範例如下：</b><br>
-            <b>new web3.providers.HttpProvider('IP位置: Port號'));</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b> 4.</b><br>
             <b>修改Dapp文件的contract文件內的contract.js檔。</b>
            </div>
         </td>
@@ -621,7 +645,7 @@
     <tr>
         <td>
             <div>
-            <b> 5.</b><br>
+            <b> 4.</b><br>
             <b>將智能合約ABI覆蓋至ABI:[ ]內。</b>
            </div>
         </td>
@@ -631,7 +655,7 @@
     <tr>
         <td>
             <div>
-            <b> 6.</b><br>
+            <b> 5.</b><br>
             <b>將智能合約地址覆蓋至底部的address:” ”內。</b>
            </div>
         </td>
@@ -641,7 +665,7 @@
     <tr>
         <td>
             <div>
-            <b> 7.</b><br>
+            <b> 6.</b><br>
             <b>設置與Dapp功能對應的Photon Cloud設定。</b>
            </div>
         </td>
@@ -721,7 +745,7 @@
         <td>
             <div>
             <b> 7.</b><br>
-            <b>輸入1筆Key，Key值：BaseUrl，Value值：IP:3000。</b>
+            <b>輸入8筆Key，Key值：2 ~ 9，Value值：IP:3000/。</b>
            </div>
         </td>
     </tr>
@@ -731,7 +755,7 @@
         <td>
             <div>
             <b> 8.</b><br>
-            <b>輸入1筆Key，Key值：ListenEvent，Value值：IP:3000/ ListenEvent。</b>
+            <b>輸入1筆Key，Key值：BaseUrl，Value值：IP:3000。</b>
            </div>
         </td>
     </tr>
@@ -741,7 +765,7 @@
         <td>
             <div>
             <b> 9.</b><br>
-            <b>輸入1筆Key，Key值：Transform，Value值：IP:3000/ Transform。</b>
+            <b>輸入1筆Key，Key值：ListenEvent，Value值：IP:3000/ ListenEvent。</b>
            </div>
         </td>
     </tr>
@@ -751,6 +775,16 @@
         <td>
             <div>
             <b> 10.</b><br>
+            <b>輸入1筆Key，Key值：Transform，Value值：IP:3000/ Transform。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 11.</b><br>
             <b>安裝NodeJS相關工具。</b>
            </div>
         </td>
@@ -872,7 +906,7 @@
         <td>
             <div>
             <b> 8.</b><br>
-            <b>啟動Unity3D遊戲</b>
+            <b>設置Unity3D設定</b>
            </div>
         </td>
     </tr>
@@ -881,7 +915,51 @@
 <br>
 <br>                             
 
-
+<div  id = 'head9'>
+   <h3 styles={font-weight:bold;}>(9) Unity3D設定</<h3> 
+</div>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 1.</b><br>
+            <b>在Photon Cloud的PUN設定找到APP ID。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 2.</b><br>
+            <b>在Unity3D的Resources資料夾找到PhotonServerSettings檔案。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 3.</b><br>
+            <b>設定APP ID為PUN設定的APP ID。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b> 4.</b><br>
+            <b>自行輸出至所要平台。</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<br>
+<br>    
 # IV、文件說明
 <span id="head1">  <h2> 智能合約設計 </h2> </span>
 
@@ -957,7 +1035,29 @@ https://nodejs.org/download/release/v8.12.0/
            </div>
         </td>
     </tr>
-</table>   
+</table>  
+<table border="1">
+    <tr>
+        <td>
+            <div id = 'code6'>
+            <b>2.</b><br>
+            <b>執行、暫停挖礦需要輸入指令，指令如下所示：</b><br>
+            <b>指令：miner.start(執行緒數)、miner.stop()</b>
+           </div>
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>
+            <div>
+            <b>3.</b><br>
+            <b>關閉私有鏈需要輸入指令，若直接關閉可能會造成私有鏈回朔或是重製，指令如下所示：</b><br>
+            <b>指令：exit</b>
+           </div>
+        </td>
+    </tr>
+</table>
 <br>
 <br>
 
@@ -967,7 +1067,7 @@ https://nodejs.org/download/release/v8.12.0/
 <table border="1">
     <tr>
         <td>
-            <div>
+            <div id = 'code5'>
             <b>1.</b><br>
             <b>若要解鎖私有鏈主帳號，則輸入指令解鎖，指令如下所示：</b><br>
             <b>指令：personal.unlockAccount(eth.accounts[0])</b>
@@ -978,7 +1078,7 @@ https://nodejs.org/download/release/v8.12.0/
 <table border="1">
     <tr>
         <td>
-            <div>
+            <div id = 'code3'>
             <b>2.</b><br>
             <b>若要新增私有鏈帳號，則輸入指令新增，指令如下所示：</b><br/>
             <b>指令：personal.newAccount()</b>
@@ -989,21 +1089,10 @@ https://nodejs.org/download/release/v8.12.0/
 <table border="1">
     <tr>
         <td>
-            <div>
+            <div id = 'code4'>
             <b>3.</b><br>
             <b>若要更改私有鏈挖礦的帳號，則輸入指令更改，指令如下所示：</b><br>
             <b>指令：miner.setEtherbase(帳號)</b>
-           </div>
-        </td>
-    </tr>
-</table>
-<table border="1">
-    <tr>
-        <td>
-            <div>
-            <b>4.</b><br>
-            <b>關閉私有鏈需要輸入指令，若直接關閉可能會造成私有鏈回朔或是重製，指令如下所示：</b><br>
-            <b>指令：exit</b>
            </div>
         </td>
     </tr>
