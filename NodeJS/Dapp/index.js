@@ -4,14 +4,14 @@ const express = require('express');
 const Web3 = require('web3');
 const BigNumber = require('bignumber.js');
 const ptimeout = require('promise.timeout')
-const contract01 = require('./contract/contract.js');
+const contract01 = require('./contract/contract01.js');
 
 const app = express();
 const web3 = new Web3();
 const eth = web3.eth;
 
 web3.setProvider(new web3.providers.HttpProvider('http://127.0.0.1:6345'));
-const myContract = web3.eth.contract(contract.ABI).at(contract.address);
+const myContract = web3.eth.contract(contract01.ABI).at(contract01.address);
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
