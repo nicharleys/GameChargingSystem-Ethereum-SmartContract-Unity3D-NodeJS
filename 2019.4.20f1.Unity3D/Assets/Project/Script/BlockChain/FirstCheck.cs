@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 public class FirstCheck : MonoBehaviour {
     [SerializeField] BlockChainFunction blockChainFunction;
-    [SerializeField] public Text startUIAddress;
-    [SerializeField] public Text startUIPassword;
+    [SerializeField] Text startUIAddress;
+    [SerializeField] InputField startUIPassword;
     public string UserPassword { get; private set; }
     public static FirstCheck Instance;
     private void Awake() {

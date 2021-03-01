@@ -4,26 +4,21 @@ public class ControllGameUI : MonoBehaviour {
     public static ControllGameUI Instance;
     public UpdateUI updateUI;
     //0 : userUI, 1 : sideUI
-    //[SerializeField] public GameObject[] mainUI_GameObject;
-    ////0 : giveCreditUI, 1 : moneyTransactionUI, 2 : ItemTransactionUI, 3 : lotteryTransactionUI
-    //[SerializeField] private GameObject[] transactionUI_GameObject;
-
-    public GameObject userUI;
-    public GameObject sideUI;
-    public GameObject giveCreditUI;
-    public GameObject moneyTransactionUI;
-    public GameObject itemTransactionUI;
-    public GameObject lotteryTransactionUI;
-
-    public GameObject lotteryStatusUI;
-
-    [SerializeField] private GameObject otherUserAddress_GameObject;
+    [SerializeField] private GameObject[] mainUI_GameObject;
+    [Space(10)]
+    //0 : giveCreditUI, 1 : moneyTransactionUI, 2 : ItemTransactionUI, 3 : lotteryTransactionUI
+    [SerializeField] private GameObject[] transactionUI_GameObject;
+    [Space(10)]
     //0 : Toggle, 1 : UI, 2 : InputField, 3 : Text
     [SerializeField] private GameObject[] giveCreditInput_Gameobject;
+    [Space(10)]
     //0 : Toggle, 1 : UI, 2 : InputField
     [SerializeField] private GameObject[] moneyTransactionInput_GameObject;
+    [Space(10)]
     //0 : transformBothUI, 1 : transformGiveUI 
     [SerializeField] private GameObject[] itemTransactionUI_GameObject;
+    [Space(10)]
+    [SerializeField] private GameObject otherUserAddress_GameObject;
     [SerializeField] private InputField lotteryBuyValue_InputField;
     [SerializeField] private GameObject lotteryStatusUI_GameObject;
     [SerializeField] private GameObject PhoneContoll_GameObject;
@@ -47,20 +42,20 @@ public class ControllGameUI : MonoBehaviour {
     }
     private void MainUIControll(string uiStatus, GameObject transactionUI) {
         uiStatus_string = uiStatus;
-        sideUI.SetActive(false);
+        mainUI_GameObject[1].SetActive(false);
         transactionUI.SetActive(true);
     }
     public void GiveCredit() {
-        MainUIControll("GiveCredit", giveCreditUI);
+        MainUIControll("GiveCredit", transactionUI_GameObject[0]);
     }
     public void MoneyTransaction() {
-        MainUIControll("MoneyTransaction", moneyTransactionUI);
+        MainUIControll("MoneyTransaction", transactionUI_GameObject[1]);
     }
     public void ItemTransaction() {
-        MainUIControll("ItemTransaction", giveCreditUI);
+        MainUIControll("ItemTransaction", transactionUI_GameObject[2]);
     }
     public void LotteryTransaction() {
-        MainUIControll("LotteryTransaction", lotteryTransactionUI);
+        MainUIControll("LotteryTransaction", transactionUI_GameObject[3]);
     }
     private void LotteryChangeNumber(int oneNumber) {
         playerNumber_int = int.Parse(updateUI.lotteryTransactionLookValue_InputField.GetComponent<InputField>().text) + oneNumber;
@@ -111,13 +106,13 @@ public class ControllGameUI : MonoBehaviour {
     }
     public void ItemTransaction_showBothItem() {
         transformGiveUIControll_bool = false;
-        itemTransactionUI.SetActive(false);
-        ItemTransactionInnerlayerUI(transformBothUIControll_bool, itemTransactionUI);
+        itemTransactionUI_GameObject[1].SetActive(false);
+        ItemTransactionInnerlayerUI(transformBothUIControll_bool, itemTransactionUI_GameObject[0]);
     }
     public void ItemTransaction_showPutItem() {
         transformBothUIControll_bool = false;
-        itemTransactionUI.SetActive(false);
-        ItemTransactionInnerlayerUI(transformGiveUIControll_bool, itemTransactionUI);
+        itemTransactionUI_GameObject[0].SetActive(false);
+        ItemTransactionInnerlayerUI(transformGiveUIControll_bool, itemTransactionUI_GameObject[1]);
     }
 
     public void LotteryTransaction_showStatus() {
@@ -131,13 +126,13 @@ public class ControllGameUI : MonoBehaviour {
         ui[2].GetComponent<InputField>().text = "";
         ui[1].SetActive(false);
         transactionUI.SetActive(false);
-        sideUI.SetActive(true);
+        mainUI_GameObject[1].SetActive(true);
     }
     public void GiveCreditBack() {
-        InputUIBack(giveCreditInput_Gameobject, giveCreditUI);
+        InputUIBack(giveCreditInput_Gameobject, transactionUI_GameObject[0]);
     }
     public void MoneyTransactionBack() {
-        InputUIBack(moneyTransactionInput_GameObject, moneyTransactionUI);
+        InputUIBack(moneyTransactionInput_GameObject, transactionUI_GameObject[1]);
     }
 
     public void ItemTransactionBack() {
@@ -146,21 +141,21 @@ public class ControllGameUI : MonoBehaviour {
         itemTransactionUI_GameObject[0].SetActive(false);
         transformGiveUIControll_bool = false;
         itemTransactionUI_GameObject[1].SetActive(false);
-        giveCreditUI.SetActive(false);
-        itemTransactionUI.SetActive(true);
+        transactionUI_GameObject[2].SetActive(false);
+        mainUI_GameObject[1].SetActive(true);
     }
     public void LotteryTransactionBack() {
         uiStatus_string = "";
         lotteryBuyValue_InputField.text = "";
         playerNumber_int = 0;
         lotteryStatusUI_GameObject.SetActive(false);
-        lotteryTransactionUI.SetActive(false);
-        sideUI.SetActive(true);
+        transactionUI_GameObject[3].SetActive(false);
+        mainUI_GameObject[1].SetActive(true);
     }
     public void CloseUI() {
         ClickObject.Instance.ControllUI = false;
         otherUserAddress_GameObject.GetComponent<Text>().text = "";
-        userUI.SetActive(false);
+        mainUI_GameObject[0].SetActive(false);
         uiModeControll_bool = true;
     }
     private void UIModeControll() {
@@ -168,10 +163,10 @@ public class ControllGameUI : MonoBehaviour {
             if (GameObject.Find("Person(Clone)")) {
                 if (ClickObject.Instance.ControllUI == true) {
                     otherUserAddress_GameObject.GetComponent<Text>().text = ClickObject.Instance.OtherUserAddress;
-                    userUI.SetActive(true);
+                    mainUI_GameObject[0].SetActive(true);
                 }
                 else if (ClickObject.Instance.ControllUI == false) {
-                    userUI.SetActive(false);
+                    mainUI_GameObject[0].SetActive(false);
                 }
             }
         }
@@ -179,7 +174,7 @@ public class ControllGameUI : MonoBehaviour {
             if (ClickObject.Instance.ControllUI == false) {
                 uiModeControll_bool = false;
                 otherUserAddress_GameObject.GetComponent<Text>().text = "";
-                userUI.SetActive(true);
+                mainUI_GameObject[0].SetActive(true);
             }
         }
     }

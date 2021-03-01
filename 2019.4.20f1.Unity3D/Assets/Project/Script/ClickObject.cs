@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 public class ClickObject : MonoBehaviour {
-    private Ray ray;
-    private RaycastHit hit;
-    private string player = "Person(Clone)";
-    private string clickBox = "Box";
+    Ray ray;
+    RaycastHit hit;
+    string player = "Person(Clone)";
+    string clickBox = "ClickBox";
 
     public static ClickObject Instance;
     public bool ControllUI { get; set; }
 
-    private GameObject nowClick = null;//紀錄滑鼠點選目標
-    private GameObject lastClick = null;//紀錄上一個滑鼠點選目標
+    GameObject nowClick = null;//紀錄滑鼠點選目標
+    GameObject lastClick = null;//紀錄上一個滑鼠點選目標
 
     public string OtherUserAddress { get; private set; }
     void Awake() {
@@ -34,7 +34,6 @@ public class ClickObject : MonoBehaviour {
                 OtherUserAddress = nowClick.transform.Find("UserName").gameObject.GetComponent<TextMesh>().text;
                 ControllUI = true;
             }
-            Debug.Log(hit.collider.name);
         }
     }
 }

@@ -22,8 +22,8 @@ public class UpdateUI : MonoBehaviour {
     [SerializeField] public GameObject[] lotteryTransaction_GameObject;
     public InputField lotteryTransactionLookValue_InputField;
 
-    public Text nowClickAddress_Text;
-    public Text changeAddressPosition_Text;
+    [SerializeField] Text nowClickAddress_Text;
+    [SerializeField] Text changeAddressPosition_Text;
 
     int nowPlayerNumber;
     int oldPlayerNumber;

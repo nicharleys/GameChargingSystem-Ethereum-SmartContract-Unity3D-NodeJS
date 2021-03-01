@@ -1917,7 +1917,7 @@ RectTransform:
   - {fileID: 1514832578}
   - {fileID: 1200974644}
   m_Father: {fileID: 1788551616}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.77300006, y: 0.20133257}
   m_AnchorMax: {x: 0.99700004, y: 0.8093326}
@@ -4447,7 +4447,7 @@ RectTransform:
   - {fileID: 391807222}
   - {fileID: 2003066216}
   m_Father: {fileID: 1788551616}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47800002, y: 0.20133257}
   m_AnchorMax: {x: 0.76000005, y: 0.631357}
@@ -9139,14 +9139,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateUI: {fileID: 2061684287}
-  userUI: {fileID: 1788551615}
-  sideUI: {fileID: 1897288035}
-  giveCreditUI: {fileID: 1504169077}
-  moneyTransactionUI: {fileID: 2010655310}
-  itemTransactionUI: {fileID: 248054296}
-  lotteryTransactionUI: {fileID: 1674891079}
-  lotteryStatusUI: {fileID: 1774019567}
-  otherUserAddress_GameObject: {fileID: 428628706}
+  mainUI_GameObject:
+  - {fileID: 1788551615}
+  - {fileID: 1897288035}
+  transactionUI_GameObject:
+  - {fileID: 1504169077}
+  - {fileID: 2010655310}
+  - {fileID: 248054296}
+  - {fileID: 1674891079}
   giveCreditInput_Gameobject:
   - {fileID: 2187910372745763776}
   - {fileID: 2095320899}
@@ -9159,6 +9159,7 @@ MonoBehaviour:
   itemTransactionUI_GameObject:
   - {fileID: 2071044940}
   - {fileID: 576679981}
+  otherUserAddress_GameObject: {fileID: 428628706}
   lotteryBuyValue_InputField: {fileID: 3590335141666340308}
   lotteryStatusUI_GameObject: {fileID: 1774019567}
   PhoneContoll_GameObject: {fileID: 1305339708}
@@ -12541,9 +12542,9 @@ RectTransform:
   - {fileID: 1897288036}
   - {fileID: 1504169078}
   - {fileID: 2010655311}
+  - {fileID: 248054297}
   - {fileID: 2071044941}
   - {fileID: 576679982}
-  - {fileID: 248054297}
   - {fileID: 1674891080}
   - {fileID: 1774019568}
   m_Father: {fileID: 1160881406}
@@ -14563,7 +14564,7 @@ RectTransform:
   - {fileID: 1195205197}
   - {fileID: 8106217}
   m_Father: {fileID: 1788551616}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47911114, y: 0.20133257}
   m_AnchorMax: {x: 0.76000005, y: 0.631357}
