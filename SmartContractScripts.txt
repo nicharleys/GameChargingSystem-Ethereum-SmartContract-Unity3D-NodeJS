@@ -203,7 +203,7 @@ contract ERC20_token is ERC20_interface {
             delete boxes[boxusers.length -1][3];
             boxusers.length--;
             boxes.length--;
-            /*¤W¤è¬°¦Û¤è¥æ´«µ¹¹ï¤è¡A¤U¤è¬°¹ï¤è¥æ´«µ¹¦Û¤è*/
+            /*ä¸Šæ–¹ç‚ºè‡ªæ–¹äº¤æ›çµ¦å°æ–¹ï¼Œä¸‹æ–¹ç‚ºå°æ–¹äº¤æ›çµ¦è‡ªæ–¹*/
             for(uint boxnumber_t = 0;boxnumber_t < boxusers.length;boxnumber_t++){
                 if(boxusers[boxnumber_t][1] == msg.sender && boxusers[boxnumber_t][0] == _to){
                     toboxnum = boxnumber_t;
